@@ -1,0 +1,9 @@
+d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe.config
+d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe
+d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.pdb
+d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Properties.Resources.resources
+d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.GenerateResource.Cache
+d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.exe
+d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.pdb
+d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Form1.resources
