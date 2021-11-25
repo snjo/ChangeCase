@@ -6,3 +6,9 @@ d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Release
 d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Release\ChangeCaseGUI.csproj.GenerateResource.Cache
 d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Release\ChangeCaseGUI.exe
 d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Release\ChangeCaseGUI.pdb
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.csprojAssemblyReference.cache
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.Form1.resources
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.Properties.Resources.resources
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.csproj.GenerateResource.cache
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.exe
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.pdb

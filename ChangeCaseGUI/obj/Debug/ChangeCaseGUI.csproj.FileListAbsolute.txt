@@ -7,3 +7,12 @@ d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Debug\C
 d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.exe
 d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.pdb
 d:\documents\visual studio 2013\Projects\ChangeCaseGUI\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Form1.resources
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csprojAssemblyReference.cache
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Form1.resources
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Properties.Resources.resources
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.GenerateResource.cache
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.exe
+E:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.pdb
+E:\Github\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe.config
+E:\Github\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe
+E:\Github\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.pdb
