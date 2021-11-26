@@ -86,16 +86,20 @@ namespace ChangeCaseGUI
 
             if (id == ghkLower.id)
             {
-                clipBoardText = Clipboard.GetText(TextDataFormat.Text);
-                clipBoardText = clipBoardText.ToLower();
-                Clipboard.SetText(clipBoardText);
+                if (Clipboard.ContainsText()) {
+                    clipBoardText = Clipboard.GetText(TextDataFormat.Text);
+                    clipBoardText = clipBoardText.ToLower();
+                    Clipboard.SetText(clipBoardText);
+                }
             }
 
             if (id == ghkUpper.id)
             {
-                clipBoardText = Clipboard.GetText(TextDataFormat.Text);
-                clipBoardText = clipBoardText.ToUpper();
-                Clipboard.SetText(clipBoardText);
+                if (Clipboard.ContainsText()) {
+                    clipBoardText = Clipboard.GetText(TextDataFormat.Text);
+                    clipBoardText = clipBoardText.ToUpper();
+                    Clipboard.SetText(clipBoardText);
+                }
             }
         }
 
