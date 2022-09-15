@@ -16,3 +16,25 @@ E:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.pdb
 E:\Github\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe.config
 E:\Github\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe
 E:\Github\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.pdb
+C:\Users\aao\OneDrive - Wood PLC\Documents\Visual Studio 2022\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe.config
+C:\Users\aao\OneDrive - Wood PLC\Documents\Visual Studio 2022\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe
+C:\Users\aao\OneDrive - Wood PLC\Documents\Visual Studio 2022\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.pdb
+C:\Users\aao\OneDrive - Wood PLC\Documents\Visual Studio 2022\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.AssemblyReference.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\Visual Studio 2022\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\Visual Studio 2022\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Form1.resources
+C:\Users\aao\OneDrive - Wood PLC\Documents\Visual Studio 2022\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Properties.Resources.resources
+C:\Users\aao\OneDrive - Wood PLC\Documents\Visual Studio 2022\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.GenerateResource.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\Visual Studio 2022\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.CoreCompileInputs.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\Visual Studio 2022\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.exe
+C:\Users\aao\OneDrive - Wood PLC\Documents\Visual Studio 2022\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.pdb
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe.config
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.pdb
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.AssemblyReference.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Form1.resources
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Properties.Resources.resources
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.GenerateResource.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.CoreCompileInputs.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.exe
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.pdb

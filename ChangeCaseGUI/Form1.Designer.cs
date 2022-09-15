@@ -37,6 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBoxCapsLock = new System.Windows.Forms.CheckBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // timer1
@@ -79,7 +82,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(137, 61);
+            this.label1.Location = new System.Drawing.Point(180, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 5;
@@ -88,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(137, 39);
+            this.label2.Location = new System.Drawing.Point(180, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 6;
@@ -97,17 +100,44 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(137, 16);
+            this.label3.Location = new System.Drawing.Point(180, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "On demand:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(130, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Ctrl+Shift + Backspace";
+            // 
+            // checkBoxCapsLock
+            // 
+            this.checkBoxCapsLock.AutoSize = true;
+            this.checkBoxCapsLock.Location = new System.Drawing.Point(12, 83);
+            this.checkBoxCapsLock.Name = "checkBoxCapsLock";
+            this.checkBoxCapsLock.Size = new System.Drawing.Size(77, 17);
+            this.checkBoxCapsLock.TabIndex = 9;
+            this.checkBoxCapsLock.Text = "Caps Lock";
+            this.checkBoxCapsLock.UseVisualStyleBackColor = true;
+            this.checkBoxCapsLock.Click += new System.EventHandler(this.checkBoxCapsLock_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(206, 90);
+            this.ClientSize = new System.Drawing.Size(257, 106);
+            this.Controls.Add(this.checkBoxCapsLock);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -133,6 +163,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkBoxCapsLock;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

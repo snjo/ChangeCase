@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,9 +15,13 @@ namespace ChangeCaseGUI
 {
     public partial class Form1 : Form
     {
+        [DllImport("user32.dll")]
+        static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
+
         string clipBoardText;
         private Hotkeys.GlobalHotkey ghkUpper;
         private Hotkeys.GlobalHotkey ghkLower;
+        private Hotkeys.GlobalHotkey ghkCapsLock;
 
         public Form1()
         {
@@ -24,15 +30,19 @@ namespace ChangeCaseGUI
             timer1.Start();
             ghkUpper = new Hotkeys.GlobalHotkey(Constants.ALT + Constants.SHIFT, Keys.U, this);
             ghkLower = new Hotkeys.GlobalHotkey(Constants.ALT + Constants.SHIFT, Keys.L, this);
+            //ghkCapsLock = new Hotkeys.GlobalHotkey(Constants.CTRL + Constants.ALT, Keys.C, this);
+            ghkCapsLock = new Hotkeys.GlobalHotkey(Constants.CTRL + Constants.SHIFT, Keys.Back, this);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             //trying to register hotkey
             if (!ghkUpper.Register())
-                writeMessage("HkUpper not registered");
+                writeMessage("Hotkey Upper not registered");
             if (!ghkLower.Register())
-                writeMessage("HkLower not registered");
+                writeMessage("Hotkey Lower not registered");
+            if (!ghkCapsLock.Register())
+                writeMessage("Hotkey CapsLock not registered");
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -75,6 +85,7 @@ namespace ChangeCaseGUI
         private void timer1_Tick(object sender, EventArgs e)
         {
             changeCase();
+            UpdateCapsLock();
         }
 
         private void HandleHotkey(int id)
@@ -101,6 +112,27 @@ namespace ChangeCaseGUI
                     Clipboard.SetText(clipBoardText);
                 }
             }
+
+            if (id == ghkCapsLock.id)
+            {
+                ToggleCapsLock();
+            }
+        }
+
+        private static void ToggleCapsLock()
+        {
+            const int KEYEVENTF_EXTENDEDKEY = 0x1;
+            const int KEYEVENTF_KEYUP = 0x2;
+            if (Control.IsKeyLocked(System.Windows.Forms.Keys.CapsLock))
+            {
+                keybd_event((byte)Keys.CapsLock, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+                keybd_event((byte)Keys.CapsLock, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
+            }
+            else //redundant at the moment
+            {
+                keybd_event((byte)Keys.CapsLock, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+                keybd_event((byte)Keys.CapsLock, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
+            }
         }
 
         private void writeMessage(string text)
@@ -121,5 +153,19 @@ namespace ChangeCaseGUI
             }            
         }
 
+        private void UpdateCapsLock()
+        {
+            checkBoxCapsLock.Checked = Control.IsKeyLocked(System.Windows.Forms.Keys.CapsLock);
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            UpdateCapsLock();
+        }
+
+        private void checkBoxCapsLock_Click(object sender, EventArgs e)
+        {
+            ToggleCapsLock();
+        }
     }
 }
