@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Security;
 using System.Runtime.InteropServices;
 using System.Security.AccessControl;
 using System.Text;
@@ -97,25 +98,37 @@ namespace ChangeCaseGUI
 
             if (id == ghkLower.id)
             {
-                if (Clipboard.ContainsText()) {
-                    clipBoardText = Clipboard.GetText(TextDataFormat.Text);
-                    clipBoardText = clipBoardText.ToLower();
-                    Clipboard.SetText(clipBoardText);
-                }
+                LowerCaseOnce();
             }
 
             if (id == ghkUpper.id)
             {
-                if (Clipboard.ContainsText()) {
-                    clipBoardText = Clipboard.GetText(TextDataFormat.Text);
-                    clipBoardText = clipBoardText.ToUpper();
-                    Clipboard.SetText(clipBoardText);
-                }
+                UpperCaseOnce();
             }
 
             if (id == ghkCapsLock.id)
             {
                 ToggleCapsLock();
+            }
+        }
+
+        private void UpperCaseOnce()
+        {
+            if (Clipboard.ContainsText())
+            {
+                clipBoardText = Clipboard.GetText(TextDataFormat.Text);
+                clipBoardText = clipBoardText.ToUpper();
+                Clipboard.SetText(clipBoardText);
+            }
+        }
+
+        private void LowerCaseOnce()
+        {
+            if (Clipboard.ContainsText())
+            {
+                clipBoardText = Clipboard.GetText(TextDataFormat.Text);
+                clipBoardText = clipBoardText.ToLower();
+                Clipboard.SetText(clipBoardText);
             }
         }
 
@@ -155,7 +168,15 @@ namespace ChangeCaseGUI
 
         private void UpdateCapsLock()
         {
-            checkBoxCapsLock.Checked = Control.IsKeyLocked(System.Windows.Forms.Keys.CapsLock);
+            bool capsLockStatus = Control.IsKeyLocked(System.Windows.Forms.Keys.CapsLock);
+            checkBoxCapsLock.Checked = capsLockStatus;
+
+            string CapsLockStatusText = "off";
+            if (capsLockStatus)
+            {
+                CapsLockStatusText = "on";
+            }
+            systrayIcon.Text = "Case Converter - Caps Lock is " + CapsLockStatusText;
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -166,6 +187,43 @@ namespace ChangeCaseGUI
         private void checkBoxCapsLock_Click(object sender, EventArgs e)
         {
             ToggleCapsLock();
+        }
+
+        private void actionCapsLock(object sender, EventArgs e)
+        {
+            ToggleCapsLock();
+        }
+
+        private void actionShowWindow(object sender, EventArgs e)
+        {
+            Show();
+            this.WindowState = FormWindowState.Normal;
+            Show();
+        }
+
+        private void actionExit(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void actionCapsLock(object sender, MouseEventArgs e)
+        {
+            ToggleCapsLock();
+        }
+
+        private void actionUpperCaseOnce(object sender, EventArgs e)
+        {
+            UpperCaseOnce();
+        }
+
+        private void actionLowerCaseOnce(object sender, EventArgs e)
+        {
+            LowerCaseOnce();
+        }
+
+        private void actionHideFromTaskbar(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }
