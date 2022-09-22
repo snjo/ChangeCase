@@ -145,7 +145,7 @@ namespace ChangeCaseGUI
 
             if (id == ghkPlainText.id)
             {
-                PlainText();
+                PlainTextOnce();
             }
 
             //if (id == ghkPasteUpperCase.id)
@@ -163,7 +163,7 @@ namespace ChangeCaseGUI
             //}
         }
 
-        private void PlainText()
+        private void PlainTextOnce()
         {
             clipBoardText = Clipboard.GetText(TextDataFormat.Text);
             Clipboard.SetText(clipBoardText);
@@ -287,6 +287,11 @@ namespace ChangeCaseGUI
         private void actionHideFromTaskbar(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void actionPlainOnce(object sender, EventArgs e)
+        {
+            PlainTextOnce();
         }
     }
 }
