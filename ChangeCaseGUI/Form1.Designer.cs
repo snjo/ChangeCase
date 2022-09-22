@@ -42,6 +42,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.systrayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.capsLockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uPPERCassClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,13 +51,17 @@
             this.buttonUpper = new System.Windows.Forms.Button();
             this.buttonLower = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.radioPlain = new System.Windows.Forms.RadioButton();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // radioLower
@@ -86,7 +91,7 @@
             this.radioOff.Location = new System.Drawing.Point(12, 31);
             this.radioOff.Name = "radioOff";
             this.radioOff.Size = new System.Drawing.Size(37, 17);
-            this.radioOff.TabIndex = 4;
+            this.radioOff.TabIndex = 1;
             this.radioOff.TabStop = true;
             this.radioOff.Text = "off";
             this.radioOff.UseVisualStyleBackColor = true;
@@ -121,7 +126,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(123, 109);
+            this.label4.Location = new System.Drawing.Point(123, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 13);
             this.label4.TabIndex = 8;
@@ -130,7 +135,7 @@
             // checkBoxCapsLock
             // 
             this.checkBoxCapsLock.AutoSize = true;
-            this.checkBoxCapsLock.Location = new System.Drawing.Point(12, 108);
+            this.checkBoxCapsLock.Location = new System.Drawing.Point(12, 131);
             this.checkBoxCapsLock.Name = "checkBoxCapsLock";
             this.checkBoxCapsLock.Size = new System.Drawing.Size(77, 17);
             this.checkBoxCapsLock.TabIndex = 9;
@@ -165,6 +170,13 @@
             this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(191, 136);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(190, 22);
+            this.toolStripMenuItem2.Text = "Hide";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.actionHideFromTaskbar);
             // 
             // toolStripMenuItem1
             // 
@@ -230,18 +242,50 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Auto:";
             // 
-            // toolStripMenuItem2
+            // textBox1
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(190, 22);
-            this.toolStripMenuItem2.Text = "Hide";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.actionHideFromTaskbar);
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(12, 156);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(224, 42);
+            this.textBox1.TabIndex = 13;
+            this.textBox1.Text = "test area";
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(123, 104);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Alt+Shift+P (plain text)";
+            // 
+            // radioPlain
+            // 
+            this.radioPlain.AutoSize = true;
+            this.radioPlain.Location = new System.Drawing.Point(12, 102);
+            this.radioPlain.Name = "radioPlain";
+            this.radioPlain.Size = new System.Drawing.Size(72, 17);
+            this.radioPlain.TabIndex = 4;
+            this.radioPlain.Text = "Plain Text";
+            this.radioPlain.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(257, 129);
+            this.ClientSize = new System.Drawing.Size(248, 210);
+            this.Controls.Add(this.radioPlain);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonLower);
             this.Controls.Add(this.buttonUpper);
@@ -287,6 +331,10 @@
         private System.Windows.Forms.Button buttonLower;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton radioPlain;
     }
 }
 

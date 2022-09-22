@@ -23,6 +23,10 @@ namespace ChangeCaseGUI
         private Hotkeys.GlobalHotkey ghkUpper;
         private Hotkeys.GlobalHotkey ghkLower;
         private Hotkeys.GlobalHotkey ghkCapsLock;
+        //private Hotkeys.GlobalHotkey ghkPasteUpperCase;
+        private Hotkeys.GlobalHotkey ghkPlainText;
+        private Icon iconUpper;
+        private Icon iconLower;
 
         public Form1()
         {
@@ -31,8 +35,12 @@ namespace ChangeCaseGUI
             timer1.Start();
             ghkUpper = new Hotkeys.GlobalHotkey(Constants.ALT + Constants.SHIFT, Keys.U, this);
             ghkLower = new Hotkeys.GlobalHotkey(Constants.ALT + Constants.SHIFT, Keys.L, this);
-            //ghkCapsLock = new Hotkeys.GlobalHotkey(Constants.CTRL + Constants.ALT, Keys.C, this);
             ghkCapsLock = new Hotkeys.GlobalHotkey(Constants.CTRL + Constants.SHIFT, Keys.Back, this);
+            ghkPlainText = new Hotkeys.GlobalHotkey(Constants.ALT + Constants.SHIFT, Keys.P, this);
+            //ghkPasteUpperCase = new Hotkeys.GlobalHotkey(Constants.ALT + Constants.SHIFT, Keys.V, this);
+
+            iconUpper = notifyIcon1.Icon;
+            iconLower = systrayIcon.Icon;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,15 +52,34 @@ namespace ChangeCaseGUI
                 writeMessage("Hotkey Lower not registered");
             if (!ghkCapsLock.Register())
                 writeMessage("Hotkey CapsLock not registered");
+            if (!ghkPlainText.Register())
+                writeMessage("Hotkey PlainText not registered");
+            //if (!ghkPasteUpperCase.Register())
+            //    writeMessage("Hotkey PasteUpperCase not registered");
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!ghkUpper.Unregister())
             {
-                MessageBox.Show("Hotkey failed to unregister");
-                //writeMessage("Hotkey failed to unregister");
+                MessageBox.Show("Hotkey ghkUpper failed to unregister");
             }
+            if (!ghkLower.Unregister())
+            {
+                MessageBox.Show("Hotkey ghkLower failed to unregister");
+            }
+            if (!ghkCapsLock.Unregister())
+            {
+                MessageBox.Show("Hotkey ghkCapsLock failed to unregister");
+            }
+            if (!ghkPlainText.Unregister())
+            {
+                MessageBox.Show("Hotkey ghkPlainText failed to unregister");
+            }
+            //if (!ghkPasteUpperCase.Unregister())
+            //{
+            //    MessageBox.Show("Hotkey ghkPasteUpperCase failed to unregister");
+            //}
         }
 
         private void changeCase()
@@ -68,12 +95,17 @@ namespace ChangeCaseGUI
                         if (radioLower.Checked)
                         {
                             clipBoardText = clipBoardText.ToLower();
+                            Clipboard.SetText(clipBoardText);
                         }
                         else if (radioUpper.Checked)
                         {
                             clipBoardText = clipBoardText.ToUpper();
+                            Clipboard.SetText(clipBoardText);
                         }
-                        Clipboard.SetText(clipBoardText);
+                        else if (radioPlain.Checked)
+                        {
+                            Clipboard.SetText(clipBoardText);
+                        }
                     }
                 }
             }
@@ -110,6 +142,31 @@ namespace ChangeCaseGUI
             {
                 ToggleCapsLock();
             }
+
+            if (id == ghkPlainText.id)
+            {
+                PlainText();
+            }
+
+            //if (id == ghkPasteUpperCase.id)
+            //{
+            //UpperCaseOnce();
+
+            //SendKeys.Send("^v");
+            //SendKeys.SendWait("a");
+            //const int KEYEVENTF_EXTENDEDKEY = 0x1;
+            //const int KEYEVENTF_KEYUP = 0x2;
+            //keybd_event((byte)Keys.ControlKey, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+            //keybd_event((byte)Keys.V, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+            //keybd_event((byte)Keys.V, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
+            //keybd_event((byte)Keys.ControlKey, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
+            //}
+        }
+
+        private void PlainText()
+        {
+            clipBoardText = Clipboard.GetText(TextDataFormat.Text);
+            Clipboard.SetText(clipBoardText);
         }
 
         private void UpperCaseOnce()
@@ -175,8 +232,14 @@ namespace ChangeCaseGUI
             if (capsLockStatus)
             {
                 CapsLockStatusText = "on";
+                systrayIcon.Icon = iconUpper;
+            }
+            else
+            {
+                systrayIcon.Icon = iconLower;
             }
             systrayIcon.Text = "Case Converter - Caps Lock is " + CapsLockStatusText;
+            
         }
 
         private void timer2_Tick(object sender, EventArgs e)
