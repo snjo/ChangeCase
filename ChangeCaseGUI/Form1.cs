@@ -27,6 +27,8 @@ namespace ChangeCaseGUI
         private Hotkeys.GlobalHotkey ghkPlainText;
         private Icon iconUpper;
         private Icon iconLower;
+        private bool oldCapslockState;
+        private bool capLockStateSet = false;
 
         public Form1()
         {
@@ -228,20 +230,24 @@ namespace ChangeCaseGUI
         private void UpdateCapsLock()
         {
             bool capsLockStatus = Control.IsKeyLocked(System.Windows.Forms.Keys.CapsLock);
-            checkBoxCapsLock.Checked = capsLockStatus;
+            if (!capLockStateSet || capsLockStatus != oldCapslockState)
+            {
+                checkBoxCapsLock.Checked = capsLockStatus;
+                oldCapslockState = capsLockStatus;
+                capLockStateSet = true;
 
-            string CapsLockStatusText = "off";
-            if (capsLockStatus)
-            {
-                CapsLockStatusText = "on";
-                systrayIcon.Icon = iconUpper;
-            }
-            else
-            {
-                systrayIcon.Icon = iconLower;
-            }
-            systrayIcon.Text = "Case Converter - Caps Lock is " + CapsLockStatusText;
-            
+                string CapsLockStatusText = "off";
+                if (capsLockStatus)
+                {
+                    CapsLockStatusText = "on";
+                    systrayIcon.Icon = iconUpper;
+                }
+                else
+                {
+                    systrayIcon.Icon = iconLower;
+                }
+                systrayIcon.Text = "Case Converter - Caps Lock is " + CapsLockStatusText;
+            }          
         }
 
         private void timer2_Tick(object sender, EventArgs e)
