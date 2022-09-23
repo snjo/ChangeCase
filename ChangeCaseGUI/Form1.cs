@@ -86,25 +86,27 @@ namespace ChangeCaseGUI
         {
             try
             {
-
-                if (Clipboard.ContainsText())
+                if (!radioOff.Checked)
                 {
-                    clipBoardText = Clipboard.GetText(TextDataFormat.Text);
-                    if (clipBoardText.Length > 0)
+                    if (Clipboard.ContainsText())
                     {
-                        if (radioLower.Checked)
+                        clipBoardText = Clipboard.GetText(TextDataFormat.Text);
+                        if (clipBoardText.Length > 0)
                         {
-                            clipBoardText = clipBoardText.ToLower();
-                            Clipboard.SetText(clipBoardText);
-                        }
-                        else if (radioUpper.Checked)
-                        {
-                            clipBoardText = clipBoardText.ToUpper();
-                            Clipboard.SetText(clipBoardText);
-                        }
-                        else if (radioPlain.Checked)
-                        {
-                            Clipboard.SetText(clipBoardText);
+                            if (radioLower.Checked)
+                            {
+                                clipBoardText = clipBoardText.ToLower();
+                                Clipboard.SetText(clipBoardText);
+                            }
+                            else if (radioUpper.Checked)
+                            {
+                                clipBoardText = clipBoardText.ToUpper();
+                                Clipboard.SetText(clipBoardText);
+                            }
+                            else if (radioPlain.Checked)
+                            {
+                                Clipboard.SetText(clipBoardText);
+                            }
                         }
                     }
                 }
