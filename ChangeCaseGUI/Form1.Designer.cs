@@ -56,6 +56,7 @@
             this.radioPlain = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,9 +169,10 @@
             this.capsLockToolStripMenuItem,
             this.uPPERCassClipboardToolStripMenuItem,
             this.lowerCaseClipboardToolStripMenuItem,
+            this.toolStripMenuItem3,
             this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(191, 136);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(191, 158);
             // 
             // toolStripMenuItem2
             // 
@@ -275,7 +277,7 @@
             this.button1.TabIndex = 15;
             this.button1.Text = "Plain";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.actionPlainOnce);
+            this.button1.Click += new System.EventHandler(this.actionPlainTextOnce);
             // 
             // textBox1
             // 
@@ -288,6 +290,13 @@
             this.textBox1.Size = new System.Drawing.Size(224, 42);
             this.textBox1.TabIndex = 13;
             this.textBox1.Text = "test area";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(190, 22);
+            this.toolStripMenuItem3.Text = "Plain text Clipboard";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.actionPlainTextOnce);
             // 
             // Form1
             // 
@@ -348,6 +357,7 @@
         private System.Windows.Forms.RadioButton radioPlain;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
     }
 }
 

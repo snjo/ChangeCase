@@ -297,7 +297,7 @@ namespace ChangeCaseGUI
             Hide();
         }
 
-        private void actionPlainOnce(object sender, EventArgs e)
+        private void actionPlainTextOnce(object sender, EventArgs e)
         {
             PlainTextOnce();
         }
