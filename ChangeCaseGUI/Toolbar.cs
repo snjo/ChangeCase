@@ -14,6 +14,7 @@ namespace ChangeCaseGUI
     {
         public Form mainform;
         private bool borderLess = false;
+        private bool alwaysOnTop = true;
 
         public Toolbar()
         {
@@ -42,6 +43,19 @@ namespace ChangeCaseGUI
             else
             {
                 FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            }
+        }
+
+        private void actionAlwaysOnTop(object sender, EventArgs e)
+        {
+            alwaysOnTop = !alwaysOnTop;
+            if (alwaysOnTop)
+            {
+                TopMost = true;
+            }
+            else
+            {
+                TopMost = false;
             }
         }
     }

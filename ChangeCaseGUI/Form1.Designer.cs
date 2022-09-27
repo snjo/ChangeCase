@@ -230,7 +230,7 @@
             this.buttonUpper.Location = new System.Drawing.Point(119, 75);
             this.buttonUpper.Name = "buttonUpper";
             this.buttonUpper.Size = new System.Drawing.Size(55, 23);
-            this.buttonUpper.TabIndex = 10;
+            this.buttonUpper.TabIndex = 11;
             this.buttonUpper.Text = "UPPER";
             this.buttonUpper.UseVisualStyleBackColor = true;
             this.buttonUpper.Click += new System.EventHandler(this.actionUpperCaseOnce);
@@ -240,7 +240,7 @@
             this.buttonLower.Location = new System.Drawing.Point(119, 51);
             this.buttonLower.Name = "buttonLower";
             this.buttonLower.Size = new System.Drawing.Size(55, 23);
-            this.buttonLower.TabIndex = 11;
+            this.buttonLower.TabIndex = 10;
             this.buttonLower.Text = "lower";
             this.buttonLower.UseVisualStyleBackColor = true;
             this.buttonLower.Click += new System.EventHandler(this.actionLowerCaseOnce);
@@ -283,7 +283,7 @@
             this.button1.Location = new System.Drawing.Point(119, 100);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(55, 23);
-            this.button1.TabIndex = 15;
+            this.button1.TabIndex = 12;
             this.button1.Text = "Plain";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.actionPlainTextOnce);
@@ -306,7 +306,7 @@
             this.buttonToolbar.Location = new System.Drawing.Point(183, 179);
             this.buttonToolbar.Name = "buttonToolbar";
             this.buttonToolbar.Size = new System.Drawing.Size(56, 23);
-            this.buttonToolbar.TabIndex = 16;
+            this.buttonToolbar.TabIndex = 15;
             this.buttonToolbar.Text = "toolbar";
             this.buttonToolbar.UseVisualStyleBackColor = true;
             this.buttonToolbar.Click += new System.EventHandler(this.actionShowToolbar);
@@ -317,7 +317,7 @@
             this.button2.Location = new System.Drawing.Point(183, 156);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 23);
-            this.button2.TabIndex = 17;
+            this.button2.TabIndex = 14;
             this.button2.Text = "hide";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.actionHideFromTaskbar);
