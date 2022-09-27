@@ -12,3 +12,19 @@ E:\Github\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.Properties.Resource
 E:\Github\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.csproj.GenerateResource.cache
 E:\Github\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.exe
 E:\Github\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.pdb
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\bin\Release\ChangeCaseGUI.exe.config
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\bin\Release\ChangeCaseGUI.exe
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\bin\Release\ChangeCaseGUI.pdb
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.csproj.AssemblyReference.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.Form1.resources
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.Properties.Resources.resources
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.csproj.GenerateResource.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.csproj.CoreCompileInputs.cache
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.exe
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.pdb
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\bin\Release\ChangeCaseGUI.exe.manifest
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\bin\Release\ChangeCaseGUI.application
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.TrustInfo.xml
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.exe.manifest
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Release\ChangeCaseGUI.application

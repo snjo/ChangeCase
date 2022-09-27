@@ -47,6 +47,7 @@
             this.capsLockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uPPERCassClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lowerCaseClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonUpper = new System.Windows.Forms.Button();
             this.buttonLower = new System.Windows.Forms.Button();
@@ -56,7 +57,8 @@
             this.radioPlain = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonToolbar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -209,6 +211,13 @@
             this.lowerCaseClipboardToolStripMenuItem.Text = "lower case Clipboard";
             this.lowerCaseClipboardToolStripMenuItem.Click += new System.EventHandler(this.actionLowerCaseOnce);
             // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(190, 22);
+            this.toolStripMenuItem3.Text = "Plain text Clipboard";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.actionPlainTextOnce);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -287,22 +296,39 @@
             this.textBox1.Location = new System.Drawing.Point(12, 156);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 42);
+            this.textBox1.Size = new System.Drawing.Size(165, 45);
             this.textBox1.TabIndex = 13;
             this.textBox1.Text = "test area";
             // 
-            // toolStripMenuItem3
+            // buttonToolbar
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(190, 22);
-            this.toolStripMenuItem3.Text = "Plain text Clipboard";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.actionPlainTextOnce);
+            this.buttonToolbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonToolbar.Location = new System.Drawing.Point(183, 179);
+            this.buttonToolbar.Name = "buttonToolbar";
+            this.buttonToolbar.Size = new System.Drawing.Size(56, 23);
+            this.buttonToolbar.TabIndex = 16;
+            this.buttonToolbar.Text = "toolbar";
+            this.buttonToolbar.UseVisualStyleBackColor = true;
+            this.buttonToolbar.Click += new System.EventHandler(this.actionShowToolbar);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button2.Location = new System.Drawing.Point(183, 156);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(56, 23);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "hide";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.actionHideFromTaskbar);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(248, 210);
+            this.ClientSize = new System.Drawing.Size(248, 213);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonToolbar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioPlain);
             this.Controls.Add(this.label6);
@@ -358,6 +384,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.Button buttonToolbar;
+        private System.Windows.Forms.Button button2;
     }
 }
 

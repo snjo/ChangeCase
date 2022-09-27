@@ -29,11 +29,12 @@ namespace ChangeCaseGUI
         private Icon iconLower;
         private bool oldCapslockState;
         private bool capLockStateSet = false;
+        public Form Current;
 
         public Form1()
         {
             InitializeComponent();
-
+            Current = this;
             timer1.Start();
             ghkUpper = new Hotkeys.GlobalHotkey(Constants.ALT + Constants.SHIFT, Keys.U, this);
             ghkLower = new Hotkeys.GlobalHotkey(Constants.ALT + Constants.SHIFT, Keys.L, this);
@@ -300,6 +301,14 @@ namespace ChangeCaseGUI
         private void actionPlainTextOnce(object sender, EventArgs e)
         {
             PlainTextOnce();
+        }
+
+        private void actionShowToolbar(object sender, EventArgs e)
+        {
+            Toolbar toolbar = new Toolbar();
+            toolbar.mainform = this;
+            toolbar.Show();
+            //toolbar.Parent = this;
         }
     }
 }

@@ -38,3 +38,9 @@ C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\D
 C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.CoreCompileInputs.cache
 C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.exe
 C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.pdb
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe.manifest
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.application
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.TrustInfo.xml
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.exe.manifest
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.application
+C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Toolbar.resources
