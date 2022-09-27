@@ -12,7 +12,7 @@ namespace ChangeCaseGUI
 {
     public partial class Toolbar : Form
     {
-        public Form mainform;
+        public Form1 mainform;
         private bool borderLess = false;
         private bool alwaysOnTop = true;
 
@@ -57,6 +57,21 @@ namespace ChangeCaseGUI
             {
                 TopMost = false;
             }
+        }
+
+        private void actionLower(object sender, EventArgs e)
+        {
+            mainform.actionLowerCaseOnce(sender, e);
+        }
+
+        private void actionUpper(object sender, EventArgs e)
+        {
+            mainform.actionUpperCaseOnce(sender, e);
+        }
+
+        private void actionPlain(object sender, EventArgs e)
+        {
+            mainform.actionPlainTextOnce(sender, e);
         }
     }
 

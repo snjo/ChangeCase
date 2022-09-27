@@ -43,6 +43,7 @@
             this.button1.TabIndex = 18;
             this.button1.Text = "Plain";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.actionPlain);
             // 
             // buttonLower
             // 
@@ -52,6 +53,7 @@
             this.buttonLower.TabIndex = 17;
             this.buttonLower.Text = "lower";
             this.buttonLower.UseVisualStyleBackColor = true;
+            this.buttonLower.Click += new System.EventHandler(this.actionLower);
             // 
             // buttonUpper
             // 
@@ -61,6 +63,7 @@
             this.buttonUpper.TabIndex = 16;
             this.buttonUpper.Text = "UPPER";
             this.buttonUpper.UseVisualStyleBackColor = true;
+            this.buttonUpper.Click += new System.EventHandler(this.actionUpper);
             // 
             // buttonPinToolbar
             // 

@@ -278,27 +278,27 @@ namespace ChangeCaseGUI
             Application.Exit();
         }
 
-        private void actionCapsLock(object sender, MouseEventArgs e)
+        public void actionCapsLock(object sender, MouseEventArgs e)
         {
             ToggleCapsLock();
         }
 
-        private void actionUpperCaseOnce(object sender, EventArgs e)
+        public void actionUpperCaseOnce(object sender, EventArgs e)
         {
             UpperCaseOnce();
         }
 
-        private void actionLowerCaseOnce(object sender, EventArgs e)
+        public void actionLowerCaseOnce(object sender, EventArgs e)
         {
             LowerCaseOnce();
         }
 
-        private void actionHideFromTaskbar(object sender, EventArgs e)
+        public void actionHideFromTaskbar(object sender, EventArgs e)
         {
             Hide();
         }
 
-        private void actionPlainTextOnce(object sender, EventArgs e)
+        public void actionPlainTextOnce(object sender, EventArgs e)
         {
             PlainTextOnce();
         }
