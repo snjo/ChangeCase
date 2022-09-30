@@ -37,7 +37,7 @@ namespace ChangeCaseGUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool StartToolbar {
             get {
                 return ((bool)(this["StartToolbar"]));
@@ -61,10 +61,10 @@ namespace ChangeCaseGUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Alt+Shift+L")]
-        public global::System.Windows.Forms.Keys HotkeyLower {
+        [global::System.Configuration.DefaultSettingValueAttribute("L")]
+        public char HotkeyLower {
             get {
-                return ((global::System.Windows.Forms.Keys)(this["HotkeyLower"]));
+                return ((char)(this["HotkeyLower"]));
             }
             set {
                 this["HotkeyLower"] = value;
@@ -73,10 +73,10 @@ namespace ChangeCaseGUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Alt+Shift+U")]
-        public global::System.Windows.Forms.Keys HotkeyUpper {
+        [global::System.Configuration.DefaultSettingValueAttribute("U")]
+        public char HotkeyUpper {
             get {
-                return ((global::System.Windows.Forms.Keys)(this["HotkeyUpper"]));
+                return ((char)(this["HotkeyUpper"]));
             }
             set {
                 this["HotkeyUpper"] = value;
@@ -85,10 +85,10 @@ namespace ChangeCaseGUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Alt+Shift+P")]
-        public global::System.Windows.Forms.Keys HotkeyPlain {
+        [global::System.Configuration.DefaultSettingValueAttribute("P")]
+        public char HotkeyPlain {
             get {
-                return ((global::System.Windows.Forms.Keys)(this["HotkeyPlain"]));
+                return ((char)(this["HotkeyPlain"]));
             }
             set {
                 this["HotkeyPlain"] = value;
@@ -97,13 +97,152 @@ namespace ChangeCaseGUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Ctrl+Shift+Back")]
-        public global::System.Windows.Forms.Keys HotkeyCapsLock {
+        public char HotkeyCapsLock {
             get {
-                return ((global::System.Windows.Forms.Keys)(this["HotkeyCapsLock"]));
+                return ((char)(this["HotkeyCapsLock"]));
             }
             set {
                 this["HotkeyCapsLock"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool HotkeyUpperCtrl {
+            get {
+                return ((bool)(this["HotkeyUpperCtrl"]));
+            }
+            set {
+                this["HotkeyUpperCtrl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool HotkeyUpperAlt {
+            get {
+                return ((bool)(this["HotkeyUpperAlt"]));
+            }
+            set {
+                this["HotkeyUpperAlt"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool HotkeyUpperShift {
+            get {
+                return ((bool)(this["HotkeyUpperShift"]));
+            }
+            set {
+                this["HotkeyUpperShift"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool HotkeyUpperWin {
+            get {
+                return ((bool)(this["HotkeyUpperWin"]));
+            }
+            set {
+                this["HotkeyUpperWin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool HotkeyLowerCtrl {
+            get {
+                return ((bool)(this["HotkeyLowerCtrl"]));
+            }
+            set {
+                this["HotkeyLowerCtrl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool HotkeyLowerAlt {
+            get {
+                return ((bool)(this["HotkeyLowerAlt"]));
+            }
+            set {
+                this["HotkeyLowerAlt"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool HotkeyLowerShift {
+            get {
+                return ((bool)(this["HotkeyLowerShift"]));
+            }
+            set {
+                this["HotkeyLowerShift"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool HotkeyLowerWin {
+            get {
+                return ((bool)(this["HotkeyLowerWin"]));
+            }
+            set {
+                this["HotkeyLowerWin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Hotkeys.Hotkey hkUpper {
+            get {
+                return ((global::Hotkeys.Hotkey)(this["hkUpper"]));
+            }
+            set {
+                this["hkUpper"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Hotkeys.Hotkey hkLower {
+            get {
+                return ((global::Hotkeys.Hotkey)(this["hkLower"]));
+            }
+            set {
+                this["hkLower"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Hotkeys.Hotkey hkPlain {
+            get {
+                return ((global::Hotkeys.Hotkey)(this["hkPlain"]));
+            }
+            set {
+                this["hkPlain"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Hotkeys.Hotkey hkCapsLock {
+            get {
+                return ((global::Hotkeys.Hotkey)(this["hkCapsLock"]));
+            }
+            set {
+                this["hkCapsLock"] = value;
             }
         }
     }

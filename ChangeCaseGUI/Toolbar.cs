@@ -12,7 +12,7 @@ namespace ChangeCaseGUI
 {
     public partial class Toolbar : Form
     {
-        public Form1 mainform;
+        public MainForm mainform;
         private bool borderLess = false;
         private bool alwaysOnTop = true;
 

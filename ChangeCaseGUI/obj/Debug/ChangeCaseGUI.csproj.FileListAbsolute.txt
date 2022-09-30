@@ -45,3 +45,21 @@ C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\D
 C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.application
 C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Toolbar.resources
 C:\Users\aao\OneDrive - Wood PLC\Documents\GitHub\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Options.resources
+D:\Github\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe.config
+D:\Github\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe.manifest
+D:\Github\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.application
+D:\Github\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.exe
+D:\Github\ChangeCase\ChangeCaseGUI\bin\Debug\ChangeCaseGUI.pdb
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.AssemblyReference.cache
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.SuggestedBindingRedirects.cache
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Options.resources
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Properties.Resources.resources
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.Toolbar.resources
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.GenerateResource.cache
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.csproj.CoreCompileInputs.cache
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.TrustInfo.xml
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.exe.manifest
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.application
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.exe
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.pdb
+D:\Github\ChangeCase\ChangeCaseGUI\obj\Debug\ChangeCaseGUI.MainForm.resources

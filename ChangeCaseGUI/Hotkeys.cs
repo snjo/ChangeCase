@@ -5,11 +5,71 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Configuration;
 
 namespace Hotkeys
 {
     class Hotkeys
     {
+    }
+
+    [Serializable]
+    public class HotkeyList// : ApplicationSettingsBase
+    {
+        public Hotkey UpperCase = new Hotkey();
+        public Hotkey LowerCase = new Hotkey();
+        public Hotkey PlainText = new Hotkey();
+        public Hotkey CapsLock = new Hotkey();
+    }
+
+    [Serializable]
+    public class Hotkey
+    {
+        public char key;
+        public bool Ctrl;
+        public bool Alt;
+        public bool Shift;
+        public bool Win;
+
+        public int Modifiers() // bool Ctrl, bool Alt, bool Shift, bool Win)
+        {
+            int result = 0;
+            if (Ctrl) result += (int)KeyModifier.Control;
+            if (Alt) result += (int)KeyModifier.Alt;
+            if (Shift) result += (int)KeyModifier.Shift;
+            if (Win) result += (int)KeyModifier.WinKey;
+            return result;
+
+        }
+
+        public string text()
+        {
+            string result = "";
+            if (key != 0)
+            {
+                if (Ctrl) result += "Ctrl+";
+                if (Alt) result += "Alt+";
+                if (Shift) result += "Shift+";
+                if (Win) result += "Win+";
+                result += key;
+            } else
+            {
+                result = "no hotkey";
+            }
+            return result;
+        }
+    }
+
+    public sealed class HotkeySetting : ApplicationSettingsBase
+    {
+        [UserScopedSetting]
+        [SettingsSerializeAs(SettingsSerializeAs.Xml)]
+        [DefaultSettingValue("")]
+        public List<Hotkey> Entries
+        {
+            get { return (List<Hotkey>)this[nameof(Entries)]; }
+            set { this[nameof(Entries)] = value; }
+        }
     }
 
     public class GlobalHotkey
@@ -33,6 +93,13 @@ namespace Hotkeys
             id = this.GetHashCode();
         }
 
+        public GlobalHotkey(Keys modifiedkey, Form form)
+        {
+            this.key = (int)modifiedkey;
+            this.hWnd = form.Handle;
+            id = this.GetHashCode();
+        }
+
         public override int GetHashCode()
         {
             return modifier ^ key ^ hWnd.ToInt32();
@@ -40,7 +107,10 @@ namespace Hotkeys
 
         public bool Register()
         {
-            return RegisterHotKey(hWnd, id, modifier, key);
+            if (id != 0)
+                return RegisterHotKey(hWnd, id, modifier, key);
+            else
+                return false;
         }
 
         public bool Unregister()
@@ -48,7 +118,11 @@ namespace Hotkeys
             return UnregisterHotKey(hWnd, id);
         }
 
+
+
     }
+
+
 
     public enum KeyModifier
     {

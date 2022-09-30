@@ -1,6 +1,6 @@
 ﻿namespace ChangeCaseGUI
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.radioLower = new System.Windows.Forms.RadioButton();
             this.radioUpper = new System.Windows.Forms.RadioButton();
             this.radioOff = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelUpper = new System.Windows.Forms.Label();
+            this.labelLower = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelCaps = new System.Windows.Forms.Label();
             this.checkBoxCapsLock = new System.Windows.Forms.CheckBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.systrayIcon = new System.Windows.Forms.NotifyIcon(this.components);
@@ -53,7 +53,7 @@
             this.buttonLower = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelPlain = new System.Windows.Forms.Label();
             this.radioPlain = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -101,23 +101,23 @@
             this.radioOff.Text = "off";
             this.radioOff.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // labelUpper
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(180, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Alt+Shit+U";
+            this.labelUpper.AutoSize = true;
+            this.labelUpper.Location = new System.Drawing.Point(180, 80);
+            this.labelUpper.Name = "labelUpper";
+            this.labelUpper.Size = new System.Drawing.Size(54, 13);
+            this.labelUpper.TabIndex = 5;
+            this.labelUpper.Text = "no hotkey";
             // 
-            // label2
+            // labelLower
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(180, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Alt+Shit+L";
+            this.labelLower.AutoSize = true;
+            this.labelLower.Location = new System.Drawing.Point(180, 56);
+            this.labelLower.Name = "labelLower";
+            this.labelLower.Size = new System.Drawing.Size(54, 13);
+            this.labelLower.TabIndex = 6;
+            this.labelLower.Text = "no hotkey";
             // 
             // label3
             // 
@@ -128,14 +128,14 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "On demand:";
             // 
-            // label4
+            // labelCaps
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(123, 132);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Ctrl+Shift + Backspace";
+            this.labelCaps.AutoSize = true;
+            this.labelCaps.Location = new System.Drawing.Point(180, 131);
+            this.labelCaps.Name = "labelCaps";
+            this.labelCaps.Size = new System.Drawing.Size(54, 13);
+            this.labelCaps.TabIndex = 8;
+            this.labelCaps.Text = "no hotkey";
             // 
             // checkBoxCapsLock
             // 
@@ -260,14 +260,14 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
             // 
-            // label6
+            // labelPlain
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(180, 106);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Alt+Shift+P";
+            this.labelPlain.AutoSize = true;
+            this.labelPlain.Location = new System.Drawing.Point(180, 106);
+            this.labelPlain.Name = "labelPlain";
+            this.labelPlain.Size = new System.Drawing.Size(54, 13);
+            this.labelPlain.TabIndex = 14;
+            this.labelPlain.Text = "no hotkey";
             // 
             // radioPlain
             // 
@@ -297,14 +297,14 @@
             this.textBox1.Location = new System.Drawing.Point(12, 156);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 45);
+            this.textBox1.Size = new System.Drawing.Size(162, 45);
             this.textBox1.TabIndex = 13;
             this.textBox1.Text = "test area";
             // 
             // buttonToolbar
             // 
             this.buttonToolbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonToolbar.Location = new System.Drawing.Point(183, 179);
+            this.buttonToolbar.Location = new System.Drawing.Point(180, 179);
             this.buttonToolbar.Name = "buttonToolbar";
             this.buttonToolbar.Size = new System.Drawing.Size(56, 23);
             this.buttonToolbar.TabIndex = 15;
@@ -315,7 +315,7 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button2.Location = new System.Drawing.Point(183, 156);
+            this.button2.Location = new System.Drawing.Point(180, 156);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 23);
             this.button2.TabIndex = 14;
@@ -333,31 +333,31 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(248, 213);
+            this.ClientSize = new System.Drawing.Size(245, 213);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonToolbar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioPlain);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelPlain);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonLower);
             this.Controls.Add(this.buttonUpper);
             this.Controls.Add(this.checkBoxCapsLock);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelCaps);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelLower);
+            this.Controls.Add(this.labelUpper);
             this.Controls.Add(this.radioOff);
             this.Controls.Add(this.radioUpper);
             this.Controls.Add(this.radioLower);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Case converter";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -374,10 +374,10 @@
         private System.Windows.Forms.RadioButton radioLower;
         private System.Windows.Forms.RadioButton radioUpper;
         private System.Windows.Forms.RadioButton radioOff;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelUpper;
+        private System.Windows.Forms.Label labelLower;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelCaps;
         private System.Windows.Forms.CheckBox checkBoxCapsLock;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.NotifyIcon systrayIcon;
@@ -392,7 +392,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelPlain;
         private System.Windows.Forms.RadioButton radioPlain;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
