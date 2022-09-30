@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ChangeCaseGUI.exe" size="762880">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ChangeCaseGUI.exe" size="766976">
       <assemblyIdentity name="ChangeCaseGUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Pc+yPp3HwWZqijCliEcFkX5cH1kovov7vxMInGV6GIY=</dsig:DigestValue>
+        <dsig:DigestValue>Locb9/v3LXEwt+s+Ift6HjbBXDGWfEt9FSDXn+AC7rE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,13 +63,13 @@
       <dsig:DigestValue>JuBM0qANVmiOaJRPLgqIbsQy6tyRqnznwkkc12nSTo4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ChangeCaseGUI.exe.config" size="184">
+  <file name="ChangeCaseGUI.exe.config" size="1718">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>FihlZtVNgcNyH37Pf0Jtll3jZOm+L55ijXNjtoS2/mo=</dsig:DigestValue>
+      <dsig:DigestValue>HEDiKQWFKGlOVFcQhIWB0ztvi5HOyIpuv8igIT7j4t8=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ChangeCaseGUI.exe.manifest" size="5069">
+    <dependentAssembly dependencyType="install" codebase="ChangeCaseGUI.exe.manifest" size="5070">
       <assemblyIdentity name="ChangeCaseGUI.exe" version="1.5.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Fw45h/XqX/ep1ojY8uPf0LC829VD9wpLCAOVzwjT9cY=</dsig:DigestValue>
+        <dsig:DigestValue>0Cq0GA5B8UL/bWrxeleM0o/YLaXvabFX3TNhPCjMt/0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

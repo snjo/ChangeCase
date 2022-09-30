@@ -22,5 +22,89 @@ namespace ChangeCaseGUI.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool StartHidden {
+            get {
+                return ((bool)(this["StartHidden"]));
+            }
+            set {
+                this["StartHidden"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool StartToolbar {
+            get {
+                return ((bool)(this["StartToolbar"]));
+            }
+            set {
+                this["StartToolbar"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool RegisterHotkeys {
+            get {
+                return ((bool)(this["RegisterHotkeys"]));
+            }
+            set {
+                this["RegisterHotkeys"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Alt+Shift+L")]
+        public global::System.Windows.Forms.Keys HotkeyLower {
+            get {
+                return ((global::System.Windows.Forms.Keys)(this["HotkeyLower"]));
+            }
+            set {
+                this["HotkeyLower"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Alt+Shift+U")]
+        public global::System.Windows.Forms.Keys HotkeyUpper {
+            get {
+                return ((global::System.Windows.Forms.Keys)(this["HotkeyUpper"]));
+            }
+            set {
+                this["HotkeyUpper"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Alt+Shift+P")]
+        public global::System.Windows.Forms.Keys HotkeyPlain {
+            get {
+                return ((global::System.Windows.Forms.Keys)(this["HotkeyPlain"]));
+            }
+            set {
+                this["HotkeyPlain"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Ctrl+Shift+Back")]
+        public global::System.Windows.Forms.Keys HotkeyCapsLock {
+            get {
+                return ((global::System.Windows.Forms.Keys)(this["HotkeyCapsLock"]));
+            }
+            set {
+                this["HotkeyCapsLock"] = value;
+            }
+        }
     }
 }

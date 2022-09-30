@@ -44,45 +44,78 @@ namespace ChangeCaseGUI
 
             iconUpper = notifyIcon1.Icon;
             iconLower = systrayIcon.Icon;
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            string errorMessages = "";
             //trying to register hotkey
             if (!ghkUpper.Register())
-                writeMessage("Hotkey Upper not registered");
+                errorMessages += "Hotkey Upper not registered\n";
             if (!ghkLower.Register())
-                writeMessage("Hotkey Lower not registered");
+                errorMessages += "Hotkey Lower not registered\n";
             if (!ghkCapsLock.Register())
-                writeMessage("Hotkey CapsLock not registered");
+                errorMessages += "Hotkey CapsLock not registered\n";
             if (!ghkPlainText.Register())
-                writeMessage("Hotkey PlainText not registered");
+                errorMessages += "Hotkey PlainText not registered\n";
             //if (!ghkPasteUpperCase.Register())
             //    writeMessage("Hotkey PasteUpperCase not registered");
+            if (errorMessages.Length > 0)
+            {
+                writeMessage(errorMessages);
+            }
+
+            if (Properties.Settings.Default.StartHidden)
+            {
+                //writeMessage("hiding");
+
+                WindowState = FormWindowState.Minimized;
+                Hide();
+            }
+            else
+            {
+                //writeMessage("show");
+                //Show();
+                this.WindowState = FormWindowState.Normal;
+                //Show();
+            }
+
+            if (Properties.Settings.Default.StartToolbar)
+            {
+                actionShowToolbar(sender, e);
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            string errorMessages = "";
             if (!ghkUpper.Unregister())
             {
-                MessageBox.Show("Hotkey ghkUpper failed to unregister");
+                errorMessages += "Hotkey ghkUpper failed to unregister\n";
             }
             if (!ghkLower.Unregister())
             {
-                MessageBox.Show("Hotkey ghkLower failed to unregister");
+                errorMessages += "Hotkey ghkLower failed to unregister\n";
             }
             if (!ghkCapsLock.Unregister())
             {
-                MessageBox.Show("Hotkey ghkCapsLock failed to unregister");
+                errorMessages += "Hotkey ghkCapsLock failed to unregister\n";
             }
             if (!ghkPlainText.Unregister())
             {
-                MessageBox.Show("Hotkey ghkPlainText failed to unregister");
+                errorMessages += "Hotkey ghkPlainText failed to unregister\n";
             }
             //if (!ghkPasteUpperCase.Unregister())
             //{
             //    MessageBox.Show("Hotkey ghkPasteUpperCase failed to unregister");
             //}
+            if (errorMessages.Length > 0)
+            {
+                writeMessage(errorMessages);
+            }
         }
 
         private void changeCase()
@@ -212,7 +245,8 @@ namespace ChangeCaseGUI
 
         private void writeMessage(string text)
         {
-            label1.Text = text;
+            MessageBox.Show(text);
+            //label1.Text = text;
         }
 
         protected override void WndProc(ref Message m)
@@ -309,6 +343,13 @@ namespace ChangeCaseGUI
             toolbar.mainform = this;
             toolbar.Show();
             //toolbar.Parent = this;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Options options = new Options();
+            //options.Hide();
+            options.ShowDialog();
         }
     }
 }

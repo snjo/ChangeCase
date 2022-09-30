@@ -1,7 +1,27 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ChangeCaseGUI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="StartHidden" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="StartToolbar" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RegisterHotkeys" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="HotkeyLower" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Alt+Shift+L</Value>
+    </Setting>
+    <Setting Name="HotkeyUpper" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Alt+Shift+U</Value>
+    </Setting>
+    <Setting Name="HotkeyPlain" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Alt+Shift+P</Value>
+    </Setting>
+    <Setting Name="HotkeyCapsLock" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Ctrl+Shift+Back</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
