@@ -11,42 +11,6 @@
     <Setting Name="RegisterHotkeys" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="HotkeyLower" Type="System.Char" Scope="User">
-      <Value Profile="(Default)">L</Value>
-    </Setting>
-    <Setting Name="HotkeyUpper" Type="System.Char" Scope="User">
-      <Value Profile="(Default)">U</Value>
-    </Setting>
-    <Setting Name="HotkeyPlain" Type="System.Char" Scope="User">
-      <Value Profile="(Default)">P</Value>
-    </Setting>
-    <Setting Name="HotkeyCapsLock" Type="System.Char" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="HotkeyUpperCtrl" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="HotkeyUpperAlt" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="HotkeyUpperShift" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="HotkeyUpperWin" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="HotkeyLowerCtrl" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="HotkeyLowerAlt" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="HotkeyLowerShift" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="HotkeyLowerWin" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
     <Setting Name="hkUpper" Type="Hotkeys.Hotkey" Scope="User">
       <Value Profile="(Default)" />
     </Setting>

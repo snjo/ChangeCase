@@ -110,7 +110,7 @@ namespace ChangeCaseGUI
             Close();
         }
 
-        private void readInputs(hotkeyInputs input, Hotkey hotkey)
+        private Hotkey readInputs(hotkeyInputs input, Hotkey hotkey)
         {
             if (hotkey == null)
                 hotkey = new Hotkeys.Hotkey();
@@ -122,6 +122,7 @@ namespace ChangeCaseGUI
             hotkey.Alt = input.Alt.Checked;
             hotkey.Shift = input.Shift.Checked;
             hotkey.Win = input.Win.Checked;
+            return hotkey;
         }
 
         private void saveSettings()
@@ -130,10 +131,10 @@ namespace ChangeCaseGUI
             Properties.Settings.Default.StartToolbar = optionStartToolbar.Checked;
             Properties.Settings.Default.RegisterHotkeys = optionRegisterHotkeys.Checked;
 
-            readInputs(UpperInputs, mainForm.hotkeys.UpperCase);
-            readInputs(LowerInputs, mainForm.hotkeys.LowerCase);
-            readInputs(PlainInputs, mainForm.hotkeys.PlainText);
-            readInputs(CapsInputs, mainForm.hotkeys.CapsLock);
+            mainForm.hotkeys.UpperCase = readInputs(UpperInputs, mainForm.hotkeys.UpperCase);
+            mainForm.hotkeys.LowerCase = readInputs(LowerInputs, mainForm.hotkeys.LowerCase);
+            mainForm.hotkeys.PlainText = readInputs(PlainInputs, mainForm.hotkeys.PlainText);
+            mainForm.hotkeys.CapsLock = readInputs(CapsInputs, mainForm.hotkeys.CapsLock);
 
             /*
             if (mainForm.hotkeys.UpperCase == null)
