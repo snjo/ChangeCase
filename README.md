@@ -1,4 +1,4 @@
-# ChangeCase
+# ChangeCase Case Converter
 Automatically changes text in clipboard to upper/lower case
 
 ![This is an image](https://github.com/snjo/ChangeCase/raw/master/screenshot.png)
