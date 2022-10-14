@@ -98,6 +98,9 @@ namespace ChangeCaseGUI
             }
 
             updateHotkeyLabels();
+            string tooltipText = "$d date\n$t time\n$c clipboard contents\n$+ increment number\n$- decrement number";
+            toolTipProcess.SetToolTip(textCustom, tooltipText);
+            toolTipProcess.SetToolTip(panel1, tooltipText);
         }
 
         private void updateHotkeyLabels()
@@ -418,7 +421,18 @@ namespace ChangeCaseGUI
             {
                 string clip = Clipboard.GetText();
                 customText = customText.Replace("$d", DateTime.Now.ToShortDateString());
+                customText = customText.Replace("$t", DateTime.Now.ToShortTimeString());
                 customText = customText.Replace("$c", clip);
+                if (customText.Contains("$+"))
+                {
+                    customText = customText.Replace("$+", numericUpDown1.Value.ToString());
+                    numericUpDown1.Value++;
+                }
+                if (customText.Contains("$-"))
+                {
+                    customText = customText.Replace("$-", numericUpDown1.Value.ToString());
+                    numericUpDown1.Value--;
+                }
 
                 Clipboard.SetText(customText);
             }
@@ -429,5 +443,6 @@ namespace ChangeCaseGUI
         {
             ProcessTextVariables();
         }
+
     }
 }

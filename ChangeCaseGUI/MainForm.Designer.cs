@@ -58,15 +58,18 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelProcess = new System.Windows.Forms.Label();
             this.buttonProcess = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textCustom = new System.Windows.Forms.TextBox();
             this.buttonToolbar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.labelProcess = new System.Windows.Forms.Label();
+            this.toolTipProcess = new System.Windows.Forms.ToolTip(this.components);
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -311,6 +314,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Controls.Add(this.labelProcess);
             this.panel1.Controls.Add(this.buttonProcess);
             this.panel1.Controls.Add(this.label2);
@@ -322,6 +326,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 163);
             this.panel1.TabIndex = 17;
+            // 
+            // labelProcess
+            // 
+            this.labelProcess.AutoSize = true;
+            this.labelProcess.Location = new System.Drawing.Point(14, 47);
+            this.labelProcess.Name = "labelProcess";
+            this.labelProcess.Size = new System.Drawing.Size(54, 13);
+            this.labelProcess.TabIndex = 23;
+            this.labelProcess.Text = "no hotkey";
             // 
             // buttonProcess
             // 
@@ -364,7 +377,7 @@
             this.textCustom.Name = "textCustom";
             this.textCustom.Size = new System.Drawing.Size(227, 81);
             this.textCustom.TabIndex = 18;
-            this.textCustom.Text = "$d - Clipboard contents: $c.";
+            this.textCustom.Text = "$d $t - $c";
             // 
             // buttonToolbar
             // 
@@ -388,14 +401,32 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.actionHideFromTaskbar);
             // 
-            // labelProcess
+            // toolTipProcess
             // 
-            this.labelProcess.AutoSize = true;
-            this.labelProcess.Location = new System.Drawing.Point(14, 47);
-            this.labelProcess.Name = "labelProcess";
-            this.labelProcess.Size = new System.Drawing.Size(35, 13);
-            this.labelProcess.TabIndex = 23;
-            this.labelProcess.Text = "label4";
+            this.toolTipProcess.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipProcess.ToolTipTitle = "Variables";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(118, 44);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(37, 20);
+            this.numericUpDown1.TabIndex = 24;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // MainForm
             // 
@@ -427,6 +458,7 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,6 +501,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonProcess;
         private System.Windows.Forms.Label labelProcess;
+        private System.Windows.Forms.ToolTip toolTipProcess;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 
