@@ -102,5 +102,16 @@ namespace ChangeCaseGUI.Properties {
                 this["hkCapsLock"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Hotkeys.Hotkey hkProcessText {
+            get {
+                return ((global::Hotkeys.Hotkey)(this["hkProcessText"]));
+            }
+            set {
+                this["hkProcessText"] = value;
+            }
+        }
     }
 }

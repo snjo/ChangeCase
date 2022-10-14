@@ -56,11 +56,17 @@
             this.labelPlain = new System.Windows.Forms.Label();
             this.radioPlain = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonProcess = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textCustom = new System.Windows.Forms.TextBox();
             this.buttonToolbar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.labelProcess = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -289,43 +295,10 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.actionPlainTextOnce);
             // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 156);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 45);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.Text = "test area";
-            // 
-            // buttonToolbar
-            // 
-            this.buttonToolbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonToolbar.Location = new System.Drawing.Point(180, 179);
-            this.buttonToolbar.Name = "buttonToolbar";
-            this.buttonToolbar.Size = new System.Drawing.Size(56, 23);
-            this.buttonToolbar.TabIndex = 15;
-            this.buttonToolbar.Text = "toolbar";
-            this.buttonToolbar.UseVisualStyleBackColor = true;
-            this.buttonToolbar.Click += new System.EventHandler(this.actionShowToolbar);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button2.Location = new System.Drawing.Point(180, 156);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "hide";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.actionHideFromTaskbar);
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(216, 4);
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(213, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(23, 23);
             this.button3.TabIndex = 16;
@@ -333,18 +306,105 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.labelProcess);
+            this.panel1.Controls.Add(this.buttonProcess);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textCustom);
+            this.panel1.Controls.Add(this.buttonToolbar);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Location = new System.Drawing.Point(0, 154);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(247, 163);
+            this.panel1.TabIndex = 17;
+            // 
+            // buttonProcess
+            // 
+            this.buttonProcess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonProcess.Location = new System.Drawing.Point(161, 42);
+            this.buttonProcess.Name = "buttonProcess";
+            this.buttonProcess.Size = new System.Drawing.Size(75, 23);
+            this.buttonProcess.TabIndex = 22;
+            this.buttonProcess.Text = "Process";
+            this.buttonProcess.UseVisualStyleBackColor = true;
+            this.buttonProcess.Click += new System.EventHandler(this.buttonProcess_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Location = new System.Drawing.Point(6, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(235, 2);
+            this.label2.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(5, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(235, 2);
+            this.label1.TabIndex = 20;
+            // 
+            // textCustom
+            // 
+            this.textCustom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCustom.Location = new System.Drawing.Point(12, 69);
+            this.textCustom.Multiline = true;
+            this.textCustom.Name = "textCustom";
+            this.textCustom.Size = new System.Drawing.Size(227, 81);
+            this.textCustom.TabIndex = 18;
+            this.textCustom.Text = "$d - Clipboard contents: $c.";
+            // 
+            // buttonToolbar
+            // 
+            this.buttonToolbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonToolbar.Location = new System.Drawing.Point(180, 11);
+            this.buttonToolbar.Name = "buttonToolbar";
+            this.buttonToolbar.Size = new System.Drawing.Size(56, 23);
+            this.buttonToolbar.TabIndex = 17;
+            this.buttonToolbar.Text = "toolbar";
+            this.buttonToolbar.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(118, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(56, 23);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "hide";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // labelProcess
+            // 
+            this.labelProcess.AutoSize = true;
+            this.labelProcess.Location = new System.Drawing.Point(14, 47);
+            this.labelProcess.Name = "labelProcess";
+            this.labelProcess.Size = new System.Drawing.Size(35, 13);
+            this.labelProcess.TabIndex = 23;
+            this.labelProcess.Text = "label4";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(245, 213);
+            this.ClientSize = new System.Drawing.Size(248, 316);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.buttonToolbar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioPlain);
             this.Controls.Add(this.labelPlain);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonLower);
             this.Controls.Add(this.buttonUpper);
@@ -363,6 +423,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,11 +457,16 @@
         private System.Windows.Forms.Label labelPlain;
         private System.Windows.Forms.RadioButton radioPlain;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textCustom;
         private System.Windows.Forms.Button buttonToolbar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonProcess;
+        private System.Windows.Forms.Label labelProcess;
     }
 }
 

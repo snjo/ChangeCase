@@ -22,9 +22,9 @@ namespace ChangeCaseGUI
         string clipBoardText;
         private Hotkeys.GlobalHotkey ghkUpper;
         private Hotkeys.GlobalHotkey ghkLower;
-        private Hotkeys.GlobalHotkey ghkCapsLock;
-        //private Hotkeys.GlobalHotkey ghkPasteUpperCase;
+        private Hotkeys.GlobalHotkey ghkCapsLock;        
         private Hotkeys.GlobalHotkey ghkPlainText;
+        private Hotkeys.GlobalHotkey ghkProcessText;
         private Icon iconUpper;
         private Icon iconLower;
         private bool oldCapslockState;
@@ -38,12 +38,6 @@ namespace ChangeCaseGUI
             InitializeComponent();
             Current = this;
             timer1.Start();
-            //LoadHotkeys();
-            
-            //ghkLower = new Hotkeys.GlobalHotkey(Constants.ALT + Constants.SHIFT, Keys.L, this);
-            //ghkCapsLock = new Hotkeys.GlobalHotkey(Constants.CTRL + Constants.SHIFT, Keys.Back, this);
-            //ghkPlainText = new Hotkeys.GlobalHotkey(Constants.ALT + Constants.SHIFT, Keys.P, this);
-            //ghkPasteUpperCase = new Hotkeys.GlobalHotkey(Constants.ALT + Constants.SHIFT, Keys.V, this);
 
             iconUpper = notifyIcon1.Icon;
             iconLower = systrayIcon.Icon;
@@ -51,53 +45,37 @@ namespace ChangeCaseGUI
 
         public void LoadHotkeys ()
         {
-            hotkeys.UpperCase = Properties.Settings.Default.hkUpper;
-            if (hotkeys.UpperCase != null)
-                if (hotkeys.UpperCase.key > 0)
-                    ghkUpper = new Hotkeys.GlobalHotkey(hotkeys.UpperCase.Modifiers(), (Keys)hotkeys.UpperCase.key, this);
-
-            hotkeys.LowerCase = Properties.Settings.Default.hkLower;
-            if (hotkeys.LowerCase != null)
-                if (hotkeys.LowerCase.key > 0)
-                    ghkLower = new Hotkeys.GlobalHotkey(hotkeys.LowerCase.Modifiers(), (Keys)hotkeys.LowerCase.key, this);
-
-            hotkeys.PlainText = Properties.Settings.Default.hkPlain;
-            if (hotkeys.PlainText != null)
-                if (hotkeys.PlainText.key > 0)
-                    ghkPlainText = new Hotkeys.GlobalHotkey(hotkeys.PlainText.Modifiers(), (Keys)hotkeys.PlainText.key, this);
-
-            hotkeys.CapsLock = Properties.Settings.Default.hkCapsLock;
-            if (hotkeys.CapsLock != null)
-                if (hotkeys.CapsLock.key > 0)
-                    ghkCapsLock = new Hotkeys.GlobalHotkey(hotkeys.CapsLock.Modifiers(), (Keys)hotkeys.CapsLock.key, this);
-
-            /*
-            hotkeys.UpperCase.key = Properties.Settings.Default.HotkeyUpper;
-            hotkeys.UpperCase.Ctrl = Properties.Settings.Default.HotkeyUpperCtrl;
-            hotkeys.UpperCase.Alt = Properties.Settings.Default.HotkeyUpperAlt;
-            hotkeys.UpperCase.Shift = Properties.Settings.Default.HotkeyUpperShift;
-            hotkeys.UpperCase.Win = Properties.Settings.Default.HotkeyUpperWin;
-            ghkUpper = new Hotkeys.GlobalHotkey(hotkeys.UpperCase.Modifiers(), (Keys)hotkeys.UpperCase.key, this);
-
-            hotkeys.LowerCase.key = Properties.Settings.Default.HotkeyLower;
-            hotkeys.LowerCase.Ctrl = Properties.Settings.Default.HotkeyLowerCtrl;
-            hotkeys.LowerCase.Alt = Properties.Settings.Default.HotkeyLowerAlt;
-            hotkeys.LowerCase.Shift = Properties.Settings.Default.HotkeyLowerShift;
-            hotkeys.LowerCase.Win = Properties.Settings.Default.HotkeyLowerWin;
-            ghkLower = new Hotkeys.GlobalHotkey(hotkeys.LowerCase.Modifiers(), (Keys)hotkeys.LowerCase.key, this);
-            */
+            
+            ghkUpper =       LoadHotkey(out hotkeys.UpperCase,   Properties.Settings.Default.hkUpper);
+            ghkLower =       LoadHotkey(out hotkeys.LowerCase,   Properties.Settings.Default.hkLower);
+            ghkCapsLock =    LoadHotkey(out hotkeys.CapsLock,    Properties.Settings.Default.hkCapsLock);
+            ghkPlainText =   LoadHotkey(out hotkeys.PlainText,   Properties.Settings.Default.hkPlain);
+            ghkProcessText = LoadHotkey(out hotkeys.ProcessText, Properties.Settings.Default.hkProcessText);
+            
         }
 
-        /*private Keys OptionToKey()
+        private GlobalHotkey LoadHotkey(out Hotkey hotkey, Hotkey settingHotkey)
         {
-            Keys newKey = Keys.None;
-            newKey += (int)Properties.Settings.Default.HotkeyUpper;
-            if (Properties.Settings.Default.HotkeyUpperCtrl) newKey = (int)newKey + Keys.Control;
-            if (Properties.Settings.Default.HotkeyUpperAlt) newKey = (int)newKey + Keys.Alt;
-            if (Properties.Settings.Default.HotkeyUpperShift) newKey = (int)newKey + Keys.Shift;
-            if (Properties.Settings.Default.HotkeyUpperWin) newKey = (int)newKey + Keys.LWin;
-            return newKey;
-        }*/
+            GlobalHotkey result = null;
+            hotkey = settingHotkey;
+            if (hotkey != null)
+            {
+                if (hotkey.key > 0)
+                {
+                    result = new Hotkeys.GlobalHotkey(hotkey.Modifiers(), (Keys)hotkey.key, this);
+                }
+                else
+                {
+                    //throw new Exception("hotkey is 0");
+                }
+            }
+            else
+            {
+                //throw new Exception("hotkey is null");
+            }
+            return result;
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -124,14 +102,17 @@ namespace ChangeCaseGUI
 
         private void updateHotkeyLabels()
         {
-            if (hotkeys.LowerCase != null)
-                labelLower.Text = hotkeys.LowerCase.text();
-            if (hotkeys.UpperCase != null)
-                labelUpper.Text = hotkeys.UpperCase.text();
-            if (hotkeys.PlainText != null)
-                labelPlain.Text = hotkeys.PlainText.text();
-            if (hotkeys.CapsLock != null)
-                labelCaps.Text = hotkeys.CapsLock.text();
+            updateHotkeyLabel(hotkeys.LowerCase,    labelLower);
+            updateHotkeyLabel(hotkeys.UpperCase,    labelUpper);
+            updateHotkeyLabel(hotkeys.PlainText,    labelPlain);
+            updateHotkeyLabel(hotkeys.CapsLock,     labelCaps);
+            updateHotkeyLabel(hotkeys.ProcessText,  labelProcess);
+        }
+
+        private void updateHotkeyLabel(Hotkey hotkey, Label label)
+        {
+            if (hotkey != null)
+                label.Text = hotkey.text();
         }
 
         public void RegisterHotKeys()
@@ -143,33 +124,26 @@ namespace ChangeCaseGUI
             string errorMessages = "";
             //trying to register hotkey
 
-            if (ghkUpper != null)
-            {
-                if (!ghkUpper.Register())
-                    errorMessages += "Hotkey Upper not registered\n";
-            }
-
-            if (ghkLower != null)
-            {
-                if (!ghkLower.Register())
-                    errorMessages += "Hotkey Lower not registered\n";
-            }
-
-            if (ghkCapsLock != null)
-            {
-                if (!ghkCapsLock.Register())
-                    errorMessages += "Hotkey CapsLock not registered\n";
-            }
-
-            if (ghkPlainText != null)
-            {
-                if (!ghkPlainText.Register())
-                    errorMessages += "Hotkey PlainText not registered\n";
-            }
+            RegisterHotKey(ghkUpper);
+            RegisterHotKey(ghkLower);
+            RegisterHotKey(ghkCapsLock);
+            RegisterHotKey(ghkPlainText);
+            RegisterHotKey(ghkProcessText);
 
             if (errorMessages.Length > 0)
             {
                 writeMessage(errorMessages);
+            }
+        }
+
+        private void RegisterHotKey (GlobalHotkey ghk)
+        {
+            if (ghk != null)
+            {
+                if (!ghk.Register())
+                {
+                    //writeMessage("register hotkey failed");                    
+                }
             }
         }
 
@@ -182,42 +156,18 @@ namespace ChangeCaseGUI
         {
             if (!hotkeysSet) return;
 
-            string errorMessages = "";
-            if (ghkUpper != null)
-            {
-                if (!ghkUpper.Unregister())
-                {
-                    errorMessages += "Hotkey ghkUpper failed to unregister\n";
-                }
-            }
+            ReleaseHotkey(ghkLower);
+            ReleaseHotkey(ghkUpper);
+            ReleaseHotkey(ghkCapsLock);
+            ReleaseHotkey(ghkPlainText);
+            ReleaseHotkey(ghkProcessText);
+        }
 
-            if (ghkLower != null)
+        private void ReleaseHotkey(GlobalHotkey ghk)
+        {
+            if (ghk != null)
             {
-                if (!ghkLower.Unregister())
-                {
-                    errorMessages += "Hotkey ghkLower failed to unregister\n";
-                }
-            }
-
-            if (ghkCapsLock != null)
-            {
-                if (!ghkCapsLock.Unregister())
-                {
-                    errorMessages += "Hotkey ghkCapsLock failed to unregister\n";
-                }
-            }
-
-            if (ghkPlainText != null)
-            {
-                if (!ghkPlainText.Unregister())
-                {
-                    errorMessages += "Hotkey ghkPlainText failed to unregister\n";
-                }
-            }
-
-            if (errorMessages.Length > 0)
-            {
-                writeMessage(errorMessages);
+                ghk.Unregister();
             }
         }
 
@@ -301,19 +251,13 @@ namespace ChangeCaseGUI
                 }
             }
 
-            //if (id == ghkPasteUpperCase.id)
-            //{
-            //UpperCaseOnce();
-
-            //SendKeys.Send("^v");
-            //SendKeys.SendWait("a");
-            //const int KEYEVENTF_EXTENDEDKEY = 0x1;
-            //const int KEYEVENTF_KEYUP = 0x2;
-            //keybd_event((byte)Keys.ControlKey, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
-            //keybd_event((byte)Keys.V, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
-            //keybd_event((byte)Keys.V, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
-            //keybd_event((byte)Keys.ControlKey, 0, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
-            //}
+            if (ghkProcessText != null)
+            {
+                if (id == ghkProcessText.id)
+                {
+                    ProcessTextVariables();
+                }
+            }
         }
 
         private void PlainTextOnce()
@@ -465,6 +409,38 @@ namespace ChangeCaseGUI
             Options options = new Options(this);
             //options.Hide();
             options.ShowDialog();
+        }
+
+        private void buttonProcess_Click(object sender, EventArgs e)
+        {           
+            ProcessTextVariables();
+        }
+
+        private void ProcessTextVariables()
+        {
+            string customText = textCustom.Text;
+            if (customText != null)
+            {
+                string clip = Clipboard.GetText();
+                customText = customText.Replace("$d", DateTime.Now.ToShortDateString());
+                customText = customText.Replace("$c", clip);
+
+                Clipboard.SetText(customText);
+            }
+            
+            /*string[] splitText = customText.Split('}');
+            foreach (string s in splitText)
+            {
+                string firstLetter = s.Substring(0, 1);
+                if (firstLetter == "{")
+                {
+                    
+                }
+                else
+                {
+
+                }
+            }*/
         }
     }
 }

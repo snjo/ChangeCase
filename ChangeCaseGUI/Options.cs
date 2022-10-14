@@ -18,6 +18,7 @@ namespace ChangeCaseGUI
         private hotkeyInputs LowerInputs = new hotkeyInputs();
         private hotkeyInputs PlainInputs = new hotkeyInputs();
         private hotkeyInputs CapsInputs = new hotkeyInputs();
+        private hotkeyInputs ProcessInputs = new hotkeyInputs();
 
         public Options(MainForm formParent)
         {
@@ -34,6 +35,7 @@ namespace ChangeCaseGUI
             fillInputs(LowerInputs, mainForm.hotkeys.LowerCase);
             fillInputs(PlainInputs, mainForm.hotkeys.PlainText);
             fillInputs(CapsInputs, mainForm.hotkeys.CapsLock);
+            fillInputs(ProcessInputs, mainForm.hotkeys.ProcessText);
 
 
             /*
@@ -94,6 +96,11 @@ namespace ChangeCaseGUI
             CapsInputs.Shift = checkCapsShift;
             CapsInputs.Win = checkCapsWin;
 
+            ProcessInputs.text = textHotkeyProcess;
+            ProcessInputs.Ctrl = checkProcessCtrl;
+            ProcessInputs.Alt = checkProcessAlt;
+            ProcessInputs.Shift = checkProcessShift;
+            ProcessInputs.Win = checkProcessWin;
 
         }
 
@@ -135,36 +142,15 @@ namespace ChangeCaseGUI
             mainForm.hotkeys.LowerCase = readInputs(LowerInputs, mainForm.hotkeys.LowerCase);
             mainForm.hotkeys.PlainText = readInputs(PlainInputs, mainForm.hotkeys.PlainText);
             mainForm.hotkeys.CapsLock = readInputs(CapsInputs, mainForm.hotkeys.CapsLock);
+            mainForm.hotkeys.ProcessText = readInputs(ProcessInputs, mainForm.hotkeys.ProcessText);
 
-            /*
-            if (mainForm.hotkeys.UpperCase == null)
-                mainForm.hotkeys.UpperCase = new Hotkeys.Hotkey();
-            if (textHotkeyUpper.Text.Length > 0)
-                mainForm.hotkeys.UpperCase.key = textHotkeyUpper.Text.ToCharArray()[0];
-            mainForm.hotkeys.UpperCase.Ctrl = checkUpperCtrl.Checked;
-            mainForm.hotkeys.UpperCase.Alt = checkUpperAlt.Checked;
-            mainForm.hotkeys.UpperCase.Shift = checkUpperShift.Checked;
-            mainForm.hotkeys.UpperCase.Win = checkUpperWin.Checked;
-
-            if (mainForm.hotkeys.LowerCase == null)
-                mainForm.hotkeys.LowerCase = new Hotkeys.Hotkey();
-            if (textHotkeyLower.Text.Length > 0)
-                mainForm.hotkeys.LowerCase.key = textHotkeyLower.Text.ToCharArray()[0];
-            mainForm.hotkeys.LowerCase.Ctrl = checkLowerCtrl.Checked;
-            mainForm.hotkeys.LowerCase.Alt = checkLowerAlt.Checked;
-            mainForm.hotkeys.LowerCase.Shift = checkLowerShift.Checked;
-            mainForm.hotkeys.LowerCase.Win = checkLowerWin.Checked;
-            */
-
-            //Properties.Settings.Default.HotkeyLower = Properties.Settings.Default.HotkeyLower;
 
             Properties.Settings.Default.hkUpper = mainForm.hotkeys.UpperCase;
             Properties.Settings.Default.hkLower = mainForm.hotkeys.LowerCase;
             Properties.Settings.Default.hkPlain = mainForm.hotkeys.PlainText;
             Properties.Settings.Default.hkCapsLock = mainForm.hotkeys.CapsLock;
+            Properties.Settings.Default.hkProcessText = mainForm.hotkeys.ProcessText;
 
-            //Properties.Settings.Default.HotkeyPlain = Properties.Settings.Default.HotkeyPlain;
-            //Properties.Settings.Default.HotkeyCapsLock = Properties.Settings.Default.HotkeyCapsLock;
 
             Properties.Settings.Default.Save();
         }

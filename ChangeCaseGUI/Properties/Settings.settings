@@ -23,5 +23,8 @@
     <Setting Name="hkCapsLock" Type="Hotkeys.Hotkey" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="hkProcessText" Type="Hotkeys.Hotkey" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -20,6 +20,7 @@ namespace Hotkeys
         public Hotkey LowerCase = new Hotkey();
         public Hotkey PlainText = new Hotkey();
         public Hotkey CapsLock = new Hotkey();
+        public Hotkey ProcessText = new Hotkey();
     }
 
     [Serializable]

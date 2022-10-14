@@ -58,12 +58,18 @@
             this.checkCapsAlt = new System.Windows.Forms.CheckBox();
             this.checkCapsCtrl = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.checkProcessWin = new System.Windows.Forms.CheckBox();
+            this.checkProcessShift = new System.Windows.Forms.CheckBox();
+            this.checkProcessAlt = new System.Windows.Forms.CheckBox();
+            this.checkProcessCtrl = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textHotkeyProcess = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonSave
             // 
             this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSave.Location = new System.Drawing.Point(285, 223);
+            this.buttonSave.Location = new System.Drawing.Point(297, 262);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 0;
@@ -74,7 +80,7 @@
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancel.Location = new System.Drawing.Point(204, 223);
+            this.buttonCancel.Location = new System.Drawing.Point(216, 262);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 1;
@@ -341,17 +347,79 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 193);
+            this.label5.Location = new System.Drawing.Point(8, 210);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(256, 13);
             this.label5.TabIndex = 29;
             this.label5.Text = "Restart the Program to register new hotkeys";
             // 
+            // checkProcessWin
+            // 
+            this.checkProcessWin.AutoSize = true;
+            this.checkProcessWin.Location = new System.Drawing.Point(308, 186);
+            this.checkProcessWin.Name = "checkProcessWin";
+            this.checkProcessWin.Size = new System.Drawing.Size(45, 17);
+            this.checkProcessWin.TabIndex = 35;
+            this.checkProcessWin.Text = "Win";
+            this.checkProcessWin.UseVisualStyleBackColor = true;
+            // 
+            // checkProcessShift
+            // 
+            this.checkProcessShift.AutoSize = true;
+            this.checkProcessShift.Location = new System.Drawing.Point(260, 186);
+            this.checkProcessShift.Name = "checkProcessShift";
+            this.checkProcessShift.Size = new System.Drawing.Size(47, 17);
+            this.checkProcessShift.TabIndex = 34;
+            this.checkProcessShift.Text = "Shift";
+            this.checkProcessShift.UseVisualStyleBackColor = true;
+            // 
+            // checkProcessAlt
+            // 
+            this.checkProcessAlt.AutoSize = true;
+            this.checkProcessAlt.Location = new System.Drawing.Point(216, 186);
+            this.checkProcessAlt.Name = "checkProcessAlt";
+            this.checkProcessAlt.Size = new System.Drawing.Size(38, 17);
+            this.checkProcessAlt.TabIndex = 33;
+            this.checkProcessAlt.Text = "Alt";
+            this.checkProcessAlt.UseVisualStyleBackColor = true;
+            // 
+            // checkProcessCtrl
+            // 
+            this.checkProcessCtrl.AutoSize = true;
+            this.checkProcessCtrl.Location = new System.Drawing.Point(172, 186);
+            this.checkProcessCtrl.Name = "checkProcessCtrl";
+            this.checkProcessCtrl.Size = new System.Drawing.Size(41, 17);
+            this.checkProcessCtrl.TabIndex = 32;
+            this.checkProcessCtrl.Text = "Ctrl";
+            this.checkProcessCtrl.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 187);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 13);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Hotkey Process Text";
+            // 
+            // textHotkeyProcess
+            // 
+            this.textHotkeyProcess.Location = new System.Drawing.Point(113, 184);
+            this.textHotkeyProcess.Name = "textHotkeyProcess";
+            this.textHotkeyProcess.Size = new System.Drawing.Size(50, 20);
+            this.textHotkeyProcess.TabIndex = 30;
+            // 
             // Options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 258);
+            this.ClientSize = new System.Drawing.Size(384, 297);
+            this.Controls.Add(this.checkProcessWin);
+            this.Controls.Add(this.checkProcessShift);
+            this.Controls.Add(this.checkProcessAlt);
+            this.Controls.Add(this.checkProcessCtrl);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textHotkeyProcess);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.checkCapsWin);
             this.Controls.Add(this.checkCapsShift);
@@ -421,5 +489,11 @@
         private System.Windows.Forms.CheckBox checkCapsAlt;
         private System.Windows.Forms.CheckBox checkCapsCtrl;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkProcessWin;
+        private System.Windows.Forms.CheckBox checkProcessShift;
+        private System.Windows.Forms.CheckBox checkProcessAlt;
+        private System.Windows.Forms.CheckBox checkProcessCtrl;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textHotkeyProcess;
     }
 }
