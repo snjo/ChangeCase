@@ -332,7 +332,7 @@
             this.buttonProcess.TabIndex = 22;
             this.buttonProcess.Text = "Process";
             this.buttonProcess.UseVisualStyleBackColor = true;
-            this.buttonProcess.Click += new System.EventHandler(this.buttonProcess_Click);
+            this.buttonProcess.Click += new System.EventHandler(this.actionProcessText);
             // 
             // label2
             // 
@@ -375,6 +375,7 @@
             this.buttonToolbar.TabIndex = 17;
             this.buttonToolbar.Text = "toolbar";
             this.buttonToolbar.UseVisualStyleBackColor = true;
+            this.buttonToolbar.Click += new System.EventHandler(this.actionShowToolbar);
             // 
             // button2
             // 
@@ -385,6 +386,7 @@
             this.button2.TabIndex = 16;
             this.button2.Text = "hide";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.actionHideFromTaskbar);
             // 
             // labelProcess
             // 

@@ -411,11 +411,6 @@ namespace ChangeCaseGUI
             options.ShowDialog();
         }
 
-        private void buttonProcess_Click(object sender, EventArgs e)
-        {           
-            ProcessTextVariables();
-        }
-
         private void ProcessTextVariables()
         {
             string customText = textCustom.Text;
@@ -428,19 +423,11 @@ namespace ChangeCaseGUI
                 Clipboard.SetText(customText);
             }
             
-            /*string[] splitText = customText.Split('}');
-            foreach (string s in splitText)
-            {
-                string firstLetter = s.Substring(0, 1);
-                if (firstLetter == "{")
-                {
-                    
-                }
-                else
-                {
+        }
 
-                }
-            }*/
+        private void actionProcessText(object sender, EventArgs e)
+        {
+            ProcessTextVariables();
         }
     }
 }
