@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ChangeCaseGUI.exe" size="778752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ChangeCaseGUI.exe" size="779264">
       <assemblyIdentity name="ChangeCaseGUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Y6AIx4cVe6t/fSQ7KB0NSHTt5DIuG4UQDwxvIQl4IAk=</dsig:DigestValue>
+        <dsig:DigestValue>sK8iW1JnpMnABY+pjI9NTTnQhqptdmln9GLqcheIDNE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

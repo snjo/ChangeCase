@@ -73,6 +73,11 @@ namespace ChangeCaseGUI
         {
             mainform.actionPlainTextOnce(sender, e);
         }
+
+        private void actionProcess(object sender, EventArgs e)
+        {
+            mainform.actionProcessText(sender, e);
+        }
     }
 
 

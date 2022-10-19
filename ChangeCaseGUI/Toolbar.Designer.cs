@@ -33,6 +33,7 @@
             this.buttonUpper = new System.Windows.Forms.Button();
             this.buttonPinToolbar = new System.Windows.Forms.Button();
             this.buttonBorder = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -67,7 +68,7 @@
             // 
             // buttonPinToolbar
             // 
-            this.buttonPinToolbar.Location = new System.Drawing.Point(151, 1);
+            this.buttonPinToolbar.Location = new System.Drawing.Point(190, 1);
             this.buttonPinToolbar.Name = "buttonPinToolbar";
             this.buttonPinToolbar.Size = new System.Drawing.Size(20, 23);
             this.buttonPinToolbar.TabIndex = 19;
@@ -77,7 +78,7 @@
             // 
             // buttonBorder
             // 
-            this.buttonBorder.Location = new System.Drawing.Point(132, 1);
+            this.buttonBorder.Location = new System.Drawing.Point(171, 1);
             this.buttonBorder.Name = "buttonBorder";
             this.buttonBorder.Size = new System.Drawing.Size(20, 23);
             this.buttonBorder.TabIndex = 20;
@@ -85,11 +86,22 @@
             this.buttonBorder.UseVisualStyleBackColor = true;
             this.buttonBorder.Click += new System.EventHandler(this.actionBorderToggle);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(132, 1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 23);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Proc";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.actionProcess);
+            // 
             // Toolbar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(172, 25);
+            this.ClientSize = new System.Drawing.Size(211, 25);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonBorder);
             this.Controls.Add(this.buttonPinToolbar);
             this.Controls.Add(this.button1);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.Button buttonUpper;
         private System.Windows.Forms.Button buttonPinToolbar;
         private System.Windows.Forms.Button buttonBorder;
+        private System.Windows.Forms.Button button2;
     }
 }
