@@ -58,6 +58,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.labelProcess = new System.Windows.Forms.Label();
             this.buttonProcess = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@
             this.buttonToolbar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.toolTipProcess = new System.Windows.Forms.ToolTip(this.components);
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -327,6 +327,28 @@
             this.panel1.Size = new System.Drawing.Size(247, 163);
             this.panel1.TabIndex = 17;
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(118, 44);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(37, 20);
+            this.numericUpDown1.TabIndex = 24;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // labelProcess
             // 
             this.labelProcess.AutoSize = true;
@@ -377,7 +399,7 @@
             this.textCustom.Name = "textCustom";
             this.textCustom.Size = new System.Drawing.Size(227, 81);
             this.textCustom.TabIndex = 18;
-            this.textCustom.Text = "$d $t - $c";
+            this.textCustom.Text = "$n3$+ $d $t - $cp";
             // 
             // buttonToolbar
             // 
@@ -405,28 +427,6 @@
             // 
             this.toolTipProcess.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipProcess.ToolTipTitle = "Variables";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(118, 44);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(37, 20);
-            this.numericUpDown1.TabIndex = 24;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // MainForm
             // 

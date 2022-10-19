@@ -98,7 +98,7 @@ namespace ChangeCaseGUI
             }
 
             updateHotkeyLabels();
-            string tooltipText = "$d date\n$t time\n$c clipboard contents\n$i number\n$+ number, then increment it\n$- number, then decrement it";
+            string tooltipText = "$d date\n$t time\n$cp clipboard contents\n$cl / $cu clipboard in lower/upper case\n$i number\n$+ number, then increment it\n$- number, then decrement it\n$n2, $n3 digits in number (01, 001)";
             toolTipProcess.SetToolTip(textCustom, tooltipText);
             toolTipProcess.SetToolTip(panel1, tooltipText);
         }
@@ -419,20 +419,40 @@ namespace ChangeCaseGUI
             string customText = textCustom.Text;
             if (customText != null)
             {
+                int padNumber = 1;
                 string clip = Clipboard.GetText();
+                if (customText.Contains("$n"))
+                {
+                    if (customText.Contains("$n2"))
+                    {
+                        customText = customText.Replace("$n2", "");
+                        padNumber = 2;
+                    }
+                    if (customText.Contains("$n3"))
+                    {
+                        customText = customText.Replace("$n3", "");
+                        padNumber = 3;
+                    }
+                }
+                
+
                 customText = customText.Replace("$d", DateTime.Now.ToShortDateString());
                 customText = customText.Replace("$t", DateTime.Now.ToShortTimeString());
-                customText = customText.Replace("$c", clip);
-                customText = customText.Replace("$i", numericUpDown1.Value.ToString());
+                customText = customText.Replace("$cp", clip);
+                customText = customText.Replace("$cl", clip.ToLower());
+                customText = customText.Replace("$cu", clip.ToUpper());
+                customText = customText.Replace("$i", numericUpDown1.Value.ToString().PadLeft(padNumber,'0'));
                 if (customText.Contains("$+"))
                 {
-                    customText = customText.Replace("$+", numericUpDown1.Value.ToString());
-                    numericUpDown1.Value++;
+                    customText = customText.Replace("$+", numericUpDown1.Value.ToString().PadLeft(padNumber, '0'));
+                    if (numericUpDown1.Value < numericUpDown1.Maximum)
+                        numericUpDown1.Value++;
                 }
                 if (customText.Contains("$-"))
                 {
-                    customText = customText.Replace("$-", numericUpDown1.Value.ToString());
-                    numericUpDown1.Value--;
+                    customText = customText.Replace("$-", numericUpDown1.Value.ToString().PadLeft(padNumber, '0'));
+                    if (numericUpDown1.Value > numericUpDown1.Minimum)
+                        numericUpDown1.Value--;
                 }
 
                 Clipboard.SetText(customText);
