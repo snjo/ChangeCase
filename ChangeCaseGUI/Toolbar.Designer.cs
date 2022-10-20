@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Toolbar));
             this.button1 = new System.Windows.Forms.Button();
             this.buttonLower = new System.Windows.Forms.Button();
             this.buttonUpper = new System.Windows.Forms.Button();
@@ -108,6 +109,7 @@
             this.Controls.Add(this.buttonLower);
             this.Controls.Add(this.buttonUpper);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Toolbar";
             this.Text = "Toolbar";
             this.TopMost = true;

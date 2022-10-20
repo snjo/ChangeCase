@@ -56,7 +56,7 @@
             this.labelPlain = new System.Windows.Forms.Label();
             this.radioPlain = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonOptions = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.labelProcess = new System.Windows.Forms.Label();
@@ -298,16 +298,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.actionPlainTextOnce);
             // 
-            // button3
+            // buttonOptions
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(213, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(23, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "⚙️";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonOptions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOptions.Location = new System.Drawing.Point(213, 4);
+            this.buttonOptions.Name = "buttonOptions";
+            this.buttonOptions.Size = new System.Drawing.Size(23, 23);
+            this.buttonOptions.TabIndex = 16;
+            this.buttonOptions.Text = "⚙️";
+            this.buttonOptions.UseVisualStyleBackColor = true;
+            this.buttonOptions.Click += new System.EventHandler(this.actionShowOptions);
             // 
             // panel1
             // 
@@ -434,7 +434,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(248, 316);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buttonOptions);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioPlain);
             this.Controls.Add(this.labelPlain);
@@ -492,7 +492,7 @@
         private System.Windows.Forms.RadioButton radioPlain;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonOptions;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

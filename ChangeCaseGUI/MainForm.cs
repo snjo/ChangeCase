@@ -407,13 +407,6 @@ namespace ChangeCaseGUI
             //toolbar.Parent = this;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Options options = new Options(this);
-            //options.Hide();
-            options.ShowDialog();
-        }
-
         private void ProcessTextVariables()
         {
             string customText = textCustom.Text;
@@ -465,5 +458,10 @@ namespace ChangeCaseGUI
             ProcessTextVariables();
         }
 
+        private void actionShowOptions(object sender, EventArgs e)
+        {
+            Options options = new Options(this);
+            options.ShowDialog();
+        }
     }
 }
