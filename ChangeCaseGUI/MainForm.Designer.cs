@@ -58,6 +58,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.buttonOptions = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonLoad3 = new System.Windows.Forms.Button();
+            this.buttonSave3 = new System.Windows.Forms.Button();
+            this.buttonLoad2 = new System.Windows.Forms.Button();
+            this.buttonSave2 = new System.Windows.Forms.Button();
+            this.buttonLoad1 = new System.Windows.Forms.Button();
+            this.buttonSave1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.labelProcess = new System.Windows.Forms.Label();
             this.buttonProcess = new System.Windows.Forms.Button();
@@ -314,6 +323,15 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.buttonLoad3);
+            this.panel1.Controls.Add(this.buttonSave3);
+            this.panel1.Controls.Add(this.buttonLoad2);
+            this.panel1.Controls.Add(this.buttonSave2);
+            this.panel1.Controls.Add(this.buttonLoad1);
+            this.panel1.Controls.Add(this.buttonSave1);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Controls.Add(this.labelProcess);
             this.panel1.Controls.Add(this.buttonProcess);
@@ -324,8 +342,95 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(0, 154);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 163);
+            this.panel1.Size = new System.Drawing.Size(247, 245);
             this.panel1.TabIndex = 17;
+            // 
+            // buttonLoad3
+            // 
+            this.buttonLoad3.Location = new System.Drawing.Point(209, 214);
+            this.buttonLoad3.Name = "buttonLoad3";
+            this.buttonLoad3.Size = new System.Drawing.Size(31, 23);
+            this.buttonLoad3.TabIndex = 33;
+            this.buttonLoad3.Text = "L";
+            this.buttonLoad3.UseVisualStyleBackColor = true;
+            this.buttonLoad3.Click += new System.EventHandler(this.actionLoad3);
+            // 
+            // buttonSave3
+            // 
+            this.buttonSave3.Location = new System.Drawing.Point(176, 214);
+            this.buttonSave3.Name = "buttonSave3";
+            this.buttonSave3.Size = new System.Drawing.Size(31, 23);
+            this.buttonSave3.TabIndex = 32;
+            this.buttonSave3.Text = "S";
+            this.buttonSave3.UseVisualStyleBackColor = true;
+            this.buttonSave3.Click += new System.EventHandler(this.actionSave3);
+            // 
+            // buttonLoad2
+            // 
+            this.buttonLoad2.Location = new System.Drawing.Point(209, 188);
+            this.buttonLoad2.Name = "buttonLoad2";
+            this.buttonLoad2.Size = new System.Drawing.Size(31, 23);
+            this.buttonLoad2.TabIndex = 31;
+            this.buttonLoad2.Text = "L";
+            this.buttonLoad2.UseVisualStyleBackColor = true;
+            this.buttonLoad2.Click += new System.EventHandler(this.actionLoad2);
+            // 
+            // buttonSave2
+            // 
+            this.buttonSave2.Location = new System.Drawing.Point(176, 188);
+            this.buttonSave2.Name = "buttonSave2";
+            this.buttonSave2.Size = new System.Drawing.Size(31, 23);
+            this.buttonSave2.TabIndex = 30;
+            this.buttonSave2.Text = "S";
+            this.buttonSave2.UseVisualStyleBackColor = true;
+            this.buttonSave2.Click += new System.EventHandler(this.actionSave2);
+            // 
+            // buttonLoad1
+            // 
+            this.buttonLoad1.Location = new System.Drawing.Point(209, 162);
+            this.buttonLoad1.Name = "buttonLoad1";
+            this.buttonLoad1.Size = new System.Drawing.Size(31, 23);
+            this.buttonLoad1.TabIndex = 29;
+            this.buttonLoad1.Text = "L";
+            this.buttonLoad1.UseVisualStyleBackColor = true;
+            this.buttonLoad1.Click += new System.EventHandler(this.actionLoad1);
+            // 
+            // buttonSave1
+            // 
+            this.buttonSave1.Location = new System.Drawing.Point(176, 162);
+            this.buttonSave1.Name = "buttonSave1";
+            this.buttonSave1.Size = new System.Drawing.Size(31, 23);
+            this.buttonSave1.TabIndex = 28;
+            this.buttonSave1.Text = "S";
+            this.buttonSave1.UseVisualStyleBackColor = true;
+            this.buttonSave1.Click += new System.EventHandler(this.actionSave1);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(12, 216);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox3.Size = new System.Drawing.Size(162, 20);
+            this.textBox3.TabIndex = 27;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(12, 190);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox2.Size = new System.Drawing.Size(162, 20);
+            this.textBox2.TabIndex = 26;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 164);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(162, 20);
+            this.textBox1.TabIndex = 25;
             // 
             // numericUpDown1
             // 
@@ -391,13 +496,12 @@
             // 
             // textCustom
             // 
-            this.textCustom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.textCustom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textCustom.Location = new System.Drawing.Point(12, 69);
             this.textCustom.Multiline = true;
             this.textCustom.Name = "textCustom";
-            this.textCustom.Size = new System.Drawing.Size(227, 81);
+            this.textCustom.Size = new System.Drawing.Size(227, 89);
             this.textCustom.TabIndex = 18;
             this.textCustom.Text = "$n3$+ $d $t - $cp";
             // 
@@ -432,7 +536,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(248, 316);
+            this.ClientSize = new System.Drawing.Size(248, 398);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonOptions);
             this.Controls.Add(this.button1);
@@ -503,6 +607,15 @@
         private System.Windows.Forms.Label labelProcess;
         private System.Windows.Forms.ToolTip toolTipProcess;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button buttonLoad1;
+        private System.Windows.Forms.Button buttonSave1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonLoad3;
+        private System.Windows.Forms.Button buttonSave3;
+        private System.Windows.Forms.Button buttonLoad2;
+        private System.Windows.Forms.Button buttonSave2;
     }
 }
 

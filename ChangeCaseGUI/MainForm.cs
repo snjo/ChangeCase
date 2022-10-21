@@ -448,6 +448,10 @@ namespace ChangeCaseGUI
                         numericUpDown1.Value--;
                 }
 
+                customText = customText.Replace("$1", textBox1.Text);
+                customText = customText.Replace("$2", textBox2.Text);
+                customText = customText.Replace("$3", textBox3.Text);
+
                 Clipboard.SetText(customText);
             }
             
@@ -462,6 +466,54 @@ namespace ChangeCaseGUI
         {
             Options options = new Options(this);
             options.ShowDialog();
+        }
+
+        private void actionSave1(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText())
+                textBox1.Text = Clipboard.GetText();
+        }
+
+        private void actionLoad1(object sender, EventArgs e)
+        {
+            setClipboardFromTextBox(textBox1);
+        }
+
+        private void actionSave2(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText())
+                textBox2.Text = Clipboard.GetText();
+        }
+
+        private void actionLoad2(object sender, EventArgs e)
+        {
+            setClipboardFromTextBox(textBox2);
+        }
+
+        private void actionSave3(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText())
+                textBox3.Text = Clipboard.GetText();
+        }
+
+        private void actionLoad3(object sender, EventArgs e)
+        {
+            setClipboardFromTextBox(textBox3);
+        }
+
+        private void setClipboardFromTextBox(TextBox textBox)
+        {
+            if (textBox.Text != null)
+            {
+                if (textBox.Text.Length > 0)
+                {
+                    Clipboard.SetText(textBox.Text);
+                }
+                else
+                {
+                    Clipboard.Clear();
+                }
+            }
         }
     }
 }
