@@ -20,6 +20,11 @@ namespace ChangeCaseGUI
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            //string tooltipText = "...";
+            //toolTip1.SetToolTip(buttonMemory1, tooltipText);
+            //toolTip1.SetToolTip(buttonMemory2, tooltipText);
+            //toolTip1.SetToolTip(buttonMemory3, tooltipText);
+
         }
 
         private void actionToolbarClose(object sender, EventArgs e)
@@ -77,6 +82,52 @@ namespace ChangeCaseGUI
         private void actionProcess(object sender, EventArgs e)
         {
             mainform.actionProcessText(sender, e);
+        }
+
+        private void saveload1(object sender, MouseEventArgs e)
+        {
+            saveLoad(1, e);
+        }
+
+        private void saveload2(object sender, MouseEventArgs e)
+        {
+            saveLoad(2, e);
+        }
+        private void saveload3(object sender, MouseEventArgs e)
+        {
+            saveLoad(3, e);
+        }
+
+        private void saveLoad(int num, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mainform.setClipboardFromTextBox(num);
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                mainform.setTextBoxFromClipboard(num);
+            }
+        }
+
+        private void updateTooltip(int num)
+        {
+            toolTip1.SetToolTip(buttonMemory1, "Left Click to load to clipboard\nRight Click to save clipboard to this slot\n\n" + mainform.getMemorySlot(num));
+        }
+
+        private void updateTooltip1(object sender, EventArgs e)
+        {
+            updateTooltip(1);
+        }
+
+        private void updateTooltip2(object sender, EventArgs e)
+        {
+            updateTooltip(2);
+        }
+
+        private void updateTooltip3(object sender, EventArgs e)
+        {
+            updateTooltip(3);
         }
     }
 

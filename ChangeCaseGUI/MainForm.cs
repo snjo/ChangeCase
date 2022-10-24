@@ -468,41 +468,48 @@ namespace ChangeCaseGUI
             options.ShowDialog();
         }
 
-        private void actionSave1(object sender, EventArgs e)
+        public void actionSave1(object sender = null, EventArgs e = null)
         {
+            setTextBoxFromClipboard(1);
+        }
+
+        public void actionLoad1(object sender = null, EventArgs e = null)
+        {
+            setClipboardFromTextBox(1);
+        }
+
+        public void actionSave2(object sender = null, EventArgs e = null)
+        {
+            setTextBoxFromClipboard(2);
+        }
+
+        public void actionLoad2(object sender = null, EventArgs e = null)
+        {
+            setClipboardFromTextBox(2);
+        }
+
+        public void actionSave3(object sender = null, EventArgs e = null)
+        {
+            setTextBoxFromClipboard(3);
+        }
+
+        public void actionLoad3(object sender = null, EventArgs e = null)
+        {
+            setClipboardFromTextBox(3);
+        }
+
+        public void setTextBoxFromClipboard(int num)
+        {
+            TextBox textBox;
+            textBox = SetTextBoxTarget(num);
             if (Clipboard.ContainsText())
-                textBox1.Text = Clipboard.GetText();
+                textBox.Text = Clipboard.GetText();
         }
 
-        private void actionLoad1(object sender, EventArgs e)
+        public void setClipboardFromTextBox(int num)//(TextBox textBox)
         {
-            setClipboardFromTextBox(textBox1);
-        }
-
-        private void actionSave2(object sender, EventArgs e)
-        {
-            if (Clipboard.ContainsText())
-                textBox2.Text = Clipboard.GetText();
-        }
-
-        private void actionLoad2(object sender, EventArgs e)
-        {
-            setClipboardFromTextBox(textBox2);
-        }
-
-        private void actionSave3(object sender, EventArgs e)
-        {
-            if (Clipboard.ContainsText())
-                textBox3.Text = Clipboard.GetText();
-        }
-
-        private void actionLoad3(object sender, EventArgs e)
-        {
-            setClipboardFromTextBox(textBox3);
-        }
-
-        private void setClipboardFromTextBox(TextBox textBox)
-        {
+            TextBox textBox;
+            textBox = SetTextBoxTarget(num);
             if (textBox.Text != null)
             {
                 if (textBox.Text.Length > 0)
@@ -514,6 +521,44 @@ namespace ChangeCaseGUI
                     Clipboard.Clear();
                 }
             }
+
+        }
+
+        private TextBox SetTextBoxTarget(int num)
+        {
+            TextBox textBox;
+            switch (num)
+            {
+                case 1:
+                    {
+                        textBox = textBox1;
+                        break;
+                    }
+                case 2:
+                    {
+                        textBox = textBox2;
+                        break;
+                    }
+                case 3:
+                    {
+                        textBox = textBox3;
+                        break;
+                    }
+                default:
+                    {
+                        textBox = textBox1;
+                        break;
+                    }
+            }
+
+            return textBox;
+        }
+
+        public string getMemorySlot(int num)
+        {
+            TextBox textBox;
+            textBox = SetTextBoxTarget(num);
+            return textBox.Text;
         }
     }
 }
