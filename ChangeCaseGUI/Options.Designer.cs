@@ -64,6 +64,9 @@
             this.checkProcessCtrl = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textHotkeyProcess = new System.Windows.Forms.TextBox();
+            this.optionSaveMemorySlots = new System.Windows.Forms.CheckBox();
+            this.textMemorySlotFolder = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonSave
@@ -409,11 +412,40 @@
             this.textHotkeyProcess.Size = new System.Drawing.Size(50, 20);
             this.textHotkeyProcess.TabIndex = 30;
             // 
+            // optionSaveMemorySlots
+            // 
+            this.optionSaveMemorySlots.AutoSize = true;
+            this.optionSaveMemorySlots.Location = new System.Drawing.Point(173, 12);
+            this.optionSaveMemorySlots.Name = "optionSaveMemorySlots";
+            this.optionSaveMemorySlots.Size = new System.Drawing.Size(142, 17);
+            this.optionSaveMemorySlots.TabIndex = 36;
+            this.optionSaveMemorySlots.Text = "Save memory slots to file";
+            this.optionSaveMemorySlots.UseVisualStyleBackColor = true;
+            // 
+            // textMemorySlotFolder
+            // 
+            this.textMemorySlotFolder.Location = new System.Drawing.Point(172, 55);
+            this.textMemorySlotFolder.Name = "textMemorySlotFolder";
+            this.textMemorySlotFolder.Size = new System.Drawing.Size(181, 20);
+            this.textMemorySlotFolder.TabIndex = 37;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(170, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(196, 13);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Memory Slot txt file folder (mem1.txt etc.)";
+            // 
             // Options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 297);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textMemorySlotFolder);
+            this.Controls.Add(this.optionSaveMemorySlots);
             this.Controls.Add(this.checkProcessWin);
             this.Controls.Add(this.checkProcessShift);
             this.Controls.Add(this.checkProcessAlt);
@@ -495,5 +527,8 @@
         private System.Windows.Forms.CheckBox checkProcessCtrl;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textHotkeyProcess;
+        private System.Windows.Forms.CheckBox optionSaveMemorySlots;
+        private System.Windows.Forms.TextBox textMemorySlotFolder;
+        private System.Windows.Forms.Label label7;
     }
 }

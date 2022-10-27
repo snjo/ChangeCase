@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Security;
 using System.Runtime.InteropServices;
@@ -101,6 +102,43 @@ namespace ChangeCaseGUI
             string tooltipText = "$d date\n$t time\n$cp clipboard contents\n$cl / $cu clipboard in lower/upper case\n$i number\n$+ number, then increment it\n$- number, then decrement it\n$n2, $n3 digits in number (01, 001)";
             toolTipProcess.SetToolTip(textCustom, tooltipText);
             toolTipProcess.SetToolTip(panel1, tooltipText);
+
+            textBox1.Text = loadTextFromFile("mem1.txt");
+            textBox2.Text = loadTextFromFile("mem2.txt");
+            textBox3.Text = loadTextFromFile("mem3.txt");
+        }
+
+        private string loadTextFromFile(string filename)
+        {
+            string folder = Properties.Settings.Default.MemorySlotFolder;
+            if (folder.Length > 0)
+            {
+                if (folder.Substring(folder.Length - 1, 1) != "\\")
+                    folder += "\\";
+            }
+            if (File.Exists(folder + filename))
+            {
+                return File.ReadAllText(folder + filename);
+            }
+            return "";
+        }
+
+        public void saveTextToFile(string filename, string text)
+        {
+            string folder = Properties.Settings.Default.MemorySlotFolder;
+            if (folder.Length > 0)
+            {
+                if (Directory.Exists(folder))
+                {
+                    if (folder.Substring(folder.Length - 1, 1) != "\\")
+                        folder += "\\";
+                    File.WriteAllText(folder+filename, text);
+                }
+            }
+            else
+            {
+                File.WriteAllText(filename, text);
+            }            
         }
 
         private void updateHotkeyLabels()
@@ -503,7 +541,15 @@ namespace ChangeCaseGUI
             TextBox textBox;
             textBox = SetTextBoxTarget(num);
             if (Clipboard.ContainsText())
-                textBox.Text = Clipboard.GetText();
+            {
+                string newText = Clipboard.GetText();
+                textBox.Text = newText;
+                
+                if (Properties.Settings.Default.SaveMemorySlots)
+                {
+                    saveTextToFile(".\\mem"+num+".txt", newText);
+                }
+            }
         }
 
         public void setClipboardFromTextBox(int num)//(TextBox textBox)

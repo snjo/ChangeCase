@@ -11,14 +11,18 @@ using System.Windows.Forms;
 
 namespace ChangeCaseGUI
 {
+
+    
+
     public partial class Options : Form
     {
         public MainForm mainForm;
-        private hotkeyInputs UpperInputs = new hotkeyInputs();
-        private hotkeyInputs LowerInputs = new hotkeyInputs();
-        private hotkeyInputs PlainInputs = new hotkeyInputs();
-        private hotkeyInputs CapsInputs = new hotkeyInputs();
-        private hotkeyInputs ProcessInputs = new hotkeyInputs();
+        private HotkeyControls UpperInputs = new HotkeyControls();
+        private HotkeyControls LowerInputs = new HotkeyControls();
+        private HotkeyControls PlainInputs = new HotkeyControls();
+        private HotkeyControls CapsInputs = new HotkeyControls();
+        private HotkeyControls ProcessInputs = new HotkeyControls();
+        //public List<HotkeyControls> hotkeyContols
 
         public Options(MainForm formParent)
         {
@@ -29,6 +33,8 @@ namespace ChangeCaseGUI
             optionStartHidden.Checked = Properties.Settings.Default.StartHidden;
             optionStartToolbar.Checked = Properties.Settings.Default.StartToolbar;
             optionRegisterHotkeys.Checked = Properties.Settings.Default.RegisterHotkeys;
+            optionSaveMemorySlots.Checked = Properties.Settings.Default.SaveMemorySlots;
+            textMemorySlotFolder.Text = Properties.Settings.Default.MemorySlotFolder;
 
 
             fillInputs(UpperInputs, mainForm.hotkeys.UpperCase);
@@ -58,10 +64,11 @@ namespace ChangeCaseGUI
             }*/
         }
 
-        private void fillInputs(hotkeyInputs input, Hotkey hotkey)
+        private void fillInputs(HotkeyControls input, Hotkey hotkey)
         {
             if (hotkey != null)
             {
+                input.hotkey = hotkey;
                 input.text.Text = hotkey.key.ToString();
                 input.Ctrl.Checked = hotkey.Ctrl;
                 input.Alt.Checked = hotkey.Alt;
@@ -117,7 +124,7 @@ namespace ChangeCaseGUI
             Close();
         }
 
-        private Hotkey readInputs(hotkeyInputs input, Hotkey hotkey)
+        private Hotkey readInputs(HotkeyControls input, Hotkey hotkey)
         {
             if (hotkey == null)
                 hotkey = new Hotkeys.Hotkey();
@@ -137,6 +144,8 @@ namespace ChangeCaseGUI
             Properties.Settings.Default.StartHidden = optionStartHidden.Checked;
             Properties.Settings.Default.StartToolbar = optionStartToolbar.Checked;
             Properties.Settings.Default.RegisterHotkeys = optionRegisterHotkeys.Checked;
+            Properties.Settings.Default.SaveMemorySlots = optionSaveMemorySlots.Checked;
+            Properties.Settings.Default.MemorySlotFolder = textMemorySlotFolder.Text;
 
             mainForm.hotkeys.UpperCase = readInputs(UpperInputs, mainForm.hotkeys.UpperCase);
             mainForm.hotkeys.LowerCase = readInputs(LowerInputs, mainForm.hotkeys.LowerCase);
@@ -155,13 +164,15 @@ namespace ChangeCaseGUI
             Properties.Settings.Default.Save();
         }
 
-        private class hotkeyInputs
-        {
-            public TextBox text;
-            public CheckBox Ctrl;
-            public CheckBox Alt;
-            public CheckBox Shift;
-            public CheckBox Win;
-        }
+
+    }
+    public class HotkeyControls
+    {
+        public TextBox text;
+        public CheckBox Ctrl;
+        public CheckBox Alt;
+        public CheckBox Shift;
+        public CheckBox Win;
+        public Hotkey hotkey;
     }
 }

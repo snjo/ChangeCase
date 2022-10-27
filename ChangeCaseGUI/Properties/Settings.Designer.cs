@@ -113,5 +113,29 @@ namespace ChangeCaseGUI.Properties {
                 this["hkProcessText"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool SaveMemorySlots {
+            get {
+                return ((bool)(this["SaveMemorySlots"]));
+            }
+            set {
+                this["SaveMemorySlots"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MemorySlotFolder {
+            get {
+                return ((string)(this["MemorySlotFolder"]));
+            }
+            set {
+                this["MemorySlotFolder"] = value;
+            }
+        }
     }
 }

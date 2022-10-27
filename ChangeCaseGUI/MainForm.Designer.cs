@@ -76,6 +76,8 @@
             this.buttonToolbar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.toolTipProcess = new System.Windows.Forms.ToolTip(this.components);
+            this.labelMemory = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -323,6 +325,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.labelMemory);
             this.panel1.Controls.Add(this.buttonLoad3);
             this.panel1.Controls.Add(this.buttonSave3);
             this.panel1.Controls.Add(this.buttonLoad2);
@@ -342,12 +346,12 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(0, 154);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 245);
+            this.panel1.Size = new System.Drawing.Size(247, 266);
             this.panel1.TabIndex = 17;
             // 
             // buttonLoad3
             // 
-            this.buttonLoad3.Location = new System.Drawing.Point(209, 214);
+            this.buttonLoad3.Location = new System.Drawing.Point(209, 237);
             this.buttonLoad3.Name = "buttonLoad3";
             this.buttonLoad3.Size = new System.Drawing.Size(31, 23);
             this.buttonLoad3.TabIndex = 33;
@@ -357,7 +361,7 @@
             // 
             // buttonSave3
             // 
-            this.buttonSave3.Location = new System.Drawing.Point(176, 214);
+            this.buttonSave3.Location = new System.Drawing.Point(176, 237);
             this.buttonSave3.Name = "buttonSave3";
             this.buttonSave3.Size = new System.Drawing.Size(31, 23);
             this.buttonSave3.TabIndex = 32;
@@ -367,7 +371,7 @@
             // 
             // buttonLoad2
             // 
-            this.buttonLoad2.Location = new System.Drawing.Point(209, 188);
+            this.buttonLoad2.Location = new System.Drawing.Point(209, 211);
             this.buttonLoad2.Name = "buttonLoad2";
             this.buttonLoad2.Size = new System.Drawing.Size(31, 23);
             this.buttonLoad2.TabIndex = 31;
@@ -377,7 +381,7 @@
             // 
             // buttonSave2
             // 
-            this.buttonSave2.Location = new System.Drawing.Point(176, 188);
+            this.buttonSave2.Location = new System.Drawing.Point(176, 211);
             this.buttonSave2.Name = "buttonSave2";
             this.buttonSave2.Size = new System.Drawing.Size(31, 23);
             this.buttonSave2.TabIndex = 30;
@@ -387,7 +391,7 @@
             // 
             // buttonLoad1
             // 
-            this.buttonLoad1.Location = new System.Drawing.Point(209, 162);
+            this.buttonLoad1.Location = new System.Drawing.Point(209, 185);
             this.buttonLoad1.Name = "buttonLoad1";
             this.buttonLoad1.Size = new System.Drawing.Size(31, 23);
             this.buttonLoad1.TabIndex = 29;
@@ -397,7 +401,7 @@
             // 
             // buttonSave1
             // 
-            this.buttonSave1.Location = new System.Drawing.Point(176, 162);
+            this.buttonSave1.Location = new System.Drawing.Point(176, 185);
             this.buttonSave1.Name = "buttonSave1";
             this.buttonSave1.Size = new System.Drawing.Size(31, 23);
             this.buttonSave1.TabIndex = 28;
@@ -407,7 +411,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 216);
+            this.textBox3.Location = new System.Drawing.Point(12, 239);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -416,7 +420,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 190);
+            this.textBox2.Location = new System.Drawing.Point(12, 213);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -425,7 +429,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 164);
+            this.textBox1.Location = new System.Drawing.Point(12, 187);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -532,11 +536,30 @@
             this.toolTipProcess.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipProcess.ToolTipTitle = "Variables";
             // 
+            // labelMemory
+            // 
+            this.labelMemory.AutoSize = true;
+            this.labelMemory.Location = new System.Drawing.Point(9, 169);
+            this.labelMemory.Name = "labelMemory";
+            this.labelMemory.Size = new System.Drawing.Size(68, 13);
+            this.labelMemory.TabIndex = 34;
+            this.labelMemory.Text = "Memory slots";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Location = new System.Drawing.Point(5, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(235, 2);
+            this.label4.TabIndex = 35;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(248, 398);
+            this.ClientSize = new System.Drawing.Size(248, 419);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonOptions);
             this.Controls.Add(this.button1);
@@ -616,6 +639,8 @@
         private System.Windows.Forms.Button buttonSave3;
         private System.Windows.Forms.Button buttonLoad2;
         private System.Windows.Forms.Button buttonSave2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelMemory;
     }
 }
 
