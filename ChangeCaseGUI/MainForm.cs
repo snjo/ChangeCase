@@ -99,7 +99,14 @@ namespace ChangeCaseGUI
             }
 
             updateHotkeyLabels();
-            string tooltipText = "$d date\n$t time\n$cp clipboard contents\n$cl / $cu clipboard in lower/upper case\n$i number\n$+ number, then increment it\n$- number, then decrement it\n$n2, $n3 digits in number (01, 001)";
+            string tooltipText = 
+                "$d date\n$t time\n" +
+                "$cp clipboard contents\n" +
+                "$cl / $cu clipboard in lower/upper case\n" +
+                "$i number\n$+ number, then increment it\n" +
+                "$- number, then decrement it\n" +
+                "$n2, $n3 use 1-3 digits in number (01, 001)" +
+                "$1 - $3 contents of the memory slots";
             toolTipProcess.SetToolTip(textCustom, tooltipText);
             toolTipProcess.SetToolTip(panel1, tooltipText);
 

@@ -123,7 +123,7 @@
             // 
             // textHotkeyUpper
             // 
-            this.textHotkeyUpper.Location = new System.Drawing.Point(114, 81);
+            this.textHotkeyUpper.Location = new System.Drawing.Point(114, 91);
             this.textHotkeyUpper.MaxLength = 1;
             this.textHotkeyUpper.Name = "textHotkeyUpper";
             this.textHotkeyUpper.Size = new System.Drawing.Size(50, 20);
@@ -132,7 +132,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 85);
+            this.label1.Location = new System.Drawing.Point(8, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 6;
@@ -141,7 +141,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 110);
+            this.label2.Location = new System.Drawing.Point(9, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 13);
             this.label2.TabIndex = 8;
@@ -149,7 +149,7 @@
             // 
             // textHotkeyLower
             // 
-            this.textHotkeyLower.Location = new System.Drawing.Point(114, 107);
+            this.textHotkeyLower.Location = new System.Drawing.Point(114, 117);
             this.textHotkeyLower.Name = "textHotkeyLower";
             this.textHotkeyLower.Size = new System.Drawing.Size(50, 20);
             this.textHotkeyLower.TabIndex = 7;
@@ -157,7 +157,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 136);
+            this.label3.Location = new System.Drawing.Point(9, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 10;
@@ -165,7 +165,7 @@
             // 
             // textHotkeyPlain
             // 
-            this.textHotkeyPlain.Location = new System.Drawing.Point(114, 133);
+            this.textHotkeyPlain.Location = new System.Drawing.Point(114, 143);
             this.textHotkeyPlain.Name = "textHotkeyPlain";
             this.textHotkeyPlain.Size = new System.Drawing.Size(50, 20);
             this.textHotkeyPlain.TabIndex = 9;
@@ -173,7 +173,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 162);
+            this.label4.Location = new System.Drawing.Point(9, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 13);
             this.label4.TabIndex = 12;
@@ -181,7 +181,7 @@
             // 
             // textHotkeyCaps
             // 
-            this.textHotkeyCaps.Location = new System.Drawing.Point(114, 159);
+            this.textHotkeyCaps.Location = new System.Drawing.Point(114, 169);
             this.textHotkeyCaps.Name = "textHotkeyCaps";
             this.textHotkeyCaps.Size = new System.Drawing.Size(50, 20);
             this.textHotkeyCaps.TabIndex = 11;
@@ -189,7 +189,7 @@
             // checkUpperCtrl
             // 
             this.checkUpperCtrl.AutoSize = true;
-            this.checkUpperCtrl.Location = new System.Drawing.Point(173, 85);
+            this.checkUpperCtrl.Location = new System.Drawing.Point(173, 95);
             this.checkUpperCtrl.Name = "checkUpperCtrl";
             this.checkUpperCtrl.Size = new System.Drawing.Size(41, 17);
             this.checkUpperCtrl.TabIndex = 13;
@@ -199,7 +199,7 @@
             // checkUpperAlt
             // 
             this.checkUpperAlt.AutoSize = true;
-            this.checkUpperAlt.Location = new System.Drawing.Point(217, 85);
+            this.checkUpperAlt.Location = new System.Drawing.Point(217, 95);
             this.checkUpperAlt.Name = "checkUpperAlt";
             this.checkUpperAlt.Size = new System.Drawing.Size(38, 17);
             this.checkUpperAlt.TabIndex = 14;
@@ -209,7 +209,7 @@
             // checkUpperShift
             // 
             this.checkUpperShift.AutoSize = true;
-            this.checkUpperShift.Location = new System.Drawing.Point(261, 85);
+            this.checkUpperShift.Location = new System.Drawing.Point(261, 95);
             this.checkUpperShift.Name = "checkUpperShift";
             this.checkUpperShift.Size = new System.Drawing.Size(47, 17);
             this.checkUpperShift.TabIndex = 15;
@@ -219,7 +219,7 @@
             // checkUpperWin
             // 
             this.checkUpperWin.AutoSize = true;
-            this.checkUpperWin.Location = new System.Drawing.Point(309, 85);
+            this.checkUpperWin.Location = new System.Drawing.Point(309, 95);
             this.checkUpperWin.Name = "checkUpperWin";
             this.checkUpperWin.Size = new System.Drawing.Size(45, 17);
             this.checkUpperWin.TabIndex = 16;
@@ -229,7 +229,7 @@
             // checkLowerWin
             // 
             this.checkLowerWin.AutoSize = true;
-            this.checkLowerWin.Location = new System.Drawing.Point(309, 109);
+            this.checkLowerWin.Location = new System.Drawing.Point(309, 119);
             this.checkLowerWin.Name = "checkLowerWin";
             this.checkLowerWin.Size = new System.Drawing.Size(45, 17);
             this.checkLowerWin.TabIndex = 20;
@@ -239,7 +239,7 @@
             // checkLowerShift
             // 
             this.checkLowerShift.AutoSize = true;
-            this.checkLowerShift.Location = new System.Drawing.Point(261, 109);
+            this.checkLowerShift.Location = new System.Drawing.Point(261, 119);
             this.checkLowerShift.Name = "checkLowerShift";
             this.checkLowerShift.Size = new System.Drawing.Size(47, 17);
             this.checkLowerShift.TabIndex = 19;
@@ -249,7 +249,7 @@
             // checkLowerAlt
             // 
             this.checkLowerAlt.AutoSize = true;
-            this.checkLowerAlt.Location = new System.Drawing.Point(217, 109);
+            this.checkLowerAlt.Location = new System.Drawing.Point(217, 119);
             this.checkLowerAlt.Name = "checkLowerAlt";
             this.checkLowerAlt.Size = new System.Drawing.Size(38, 17);
             this.checkLowerAlt.TabIndex = 18;
@@ -259,7 +259,7 @@
             // checkLowerCtrl
             // 
             this.checkLowerCtrl.AutoSize = true;
-            this.checkLowerCtrl.Location = new System.Drawing.Point(173, 109);
+            this.checkLowerCtrl.Location = new System.Drawing.Point(173, 119);
             this.checkLowerCtrl.Name = "checkLowerCtrl";
             this.checkLowerCtrl.Size = new System.Drawing.Size(41, 17);
             this.checkLowerCtrl.TabIndex = 17;
@@ -269,7 +269,7 @@
             // checkPlainWin
             // 
             this.checkPlainWin.AutoSize = true;
-            this.checkPlainWin.Location = new System.Drawing.Point(309, 136);
+            this.checkPlainWin.Location = new System.Drawing.Point(309, 146);
             this.checkPlainWin.Name = "checkPlainWin";
             this.checkPlainWin.Size = new System.Drawing.Size(45, 17);
             this.checkPlainWin.TabIndex = 24;
@@ -279,7 +279,7 @@
             // checkPlainShift
             // 
             this.checkPlainShift.AutoSize = true;
-            this.checkPlainShift.Location = new System.Drawing.Point(261, 136);
+            this.checkPlainShift.Location = new System.Drawing.Point(261, 146);
             this.checkPlainShift.Name = "checkPlainShift";
             this.checkPlainShift.Size = new System.Drawing.Size(47, 17);
             this.checkPlainShift.TabIndex = 23;
@@ -289,7 +289,7 @@
             // checkPlainAlt
             // 
             this.checkPlainAlt.AutoSize = true;
-            this.checkPlainAlt.Location = new System.Drawing.Point(217, 136);
+            this.checkPlainAlt.Location = new System.Drawing.Point(217, 146);
             this.checkPlainAlt.Name = "checkPlainAlt";
             this.checkPlainAlt.Size = new System.Drawing.Size(38, 17);
             this.checkPlainAlt.TabIndex = 22;
@@ -299,7 +299,7 @@
             // checkPlainCtrl
             // 
             this.checkPlainCtrl.AutoSize = true;
-            this.checkPlainCtrl.Location = new System.Drawing.Point(173, 136);
+            this.checkPlainCtrl.Location = new System.Drawing.Point(173, 146);
             this.checkPlainCtrl.Name = "checkPlainCtrl";
             this.checkPlainCtrl.Size = new System.Drawing.Size(41, 17);
             this.checkPlainCtrl.TabIndex = 21;
@@ -309,7 +309,7 @@
             // checkCapsWin
             // 
             this.checkCapsWin.AutoSize = true;
-            this.checkCapsWin.Location = new System.Drawing.Point(309, 161);
+            this.checkCapsWin.Location = new System.Drawing.Point(309, 171);
             this.checkCapsWin.Name = "checkCapsWin";
             this.checkCapsWin.Size = new System.Drawing.Size(45, 17);
             this.checkCapsWin.TabIndex = 28;
@@ -319,7 +319,7 @@
             // checkCapsShift
             // 
             this.checkCapsShift.AutoSize = true;
-            this.checkCapsShift.Location = new System.Drawing.Point(261, 161);
+            this.checkCapsShift.Location = new System.Drawing.Point(261, 171);
             this.checkCapsShift.Name = "checkCapsShift";
             this.checkCapsShift.Size = new System.Drawing.Size(47, 17);
             this.checkCapsShift.TabIndex = 27;
@@ -329,7 +329,7 @@
             // checkCapsAlt
             // 
             this.checkCapsAlt.AutoSize = true;
-            this.checkCapsAlt.Location = new System.Drawing.Point(217, 161);
+            this.checkCapsAlt.Location = new System.Drawing.Point(217, 171);
             this.checkCapsAlt.Name = "checkCapsAlt";
             this.checkCapsAlt.Size = new System.Drawing.Size(38, 17);
             this.checkCapsAlt.TabIndex = 26;
@@ -339,7 +339,7 @@
             // checkCapsCtrl
             // 
             this.checkCapsCtrl.AutoSize = true;
-            this.checkCapsCtrl.Location = new System.Drawing.Point(173, 161);
+            this.checkCapsCtrl.Location = new System.Drawing.Point(173, 171);
             this.checkCapsCtrl.Name = "checkCapsCtrl";
             this.checkCapsCtrl.Size = new System.Drawing.Size(41, 17);
             this.checkCapsCtrl.TabIndex = 25;
@@ -350,7 +350,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 210);
+            this.label5.Location = new System.Drawing.Point(8, 223);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(256, 13);
             this.label5.TabIndex = 29;
@@ -359,7 +359,7 @@
             // checkProcessWin
             // 
             this.checkProcessWin.AutoSize = true;
-            this.checkProcessWin.Location = new System.Drawing.Point(308, 186);
+            this.checkProcessWin.Location = new System.Drawing.Point(309, 197);
             this.checkProcessWin.Name = "checkProcessWin";
             this.checkProcessWin.Size = new System.Drawing.Size(45, 17);
             this.checkProcessWin.TabIndex = 35;
@@ -369,7 +369,7 @@
             // checkProcessShift
             // 
             this.checkProcessShift.AutoSize = true;
-            this.checkProcessShift.Location = new System.Drawing.Point(260, 186);
+            this.checkProcessShift.Location = new System.Drawing.Point(261, 197);
             this.checkProcessShift.Name = "checkProcessShift";
             this.checkProcessShift.Size = new System.Drawing.Size(47, 17);
             this.checkProcessShift.TabIndex = 34;
@@ -379,7 +379,7 @@
             // checkProcessAlt
             // 
             this.checkProcessAlt.AutoSize = true;
-            this.checkProcessAlt.Location = new System.Drawing.Point(216, 186);
+            this.checkProcessAlt.Location = new System.Drawing.Point(217, 197);
             this.checkProcessAlt.Name = "checkProcessAlt";
             this.checkProcessAlt.Size = new System.Drawing.Size(38, 17);
             this.checkProcessAlt.TabIndex = 33;
@@ -389,7 +389,7 @@
             // checkProcessCtrl
             // 
             this.checkProcessCtrl.AutoSize = true;
-            this.checkProcessCtrl.Location = new System.Drawing.Point(172, 186);
+            this.checkProcessCtrl.Location = new System.Drawing.Point(173, 197);
             this.checkProcessCtrl.Name = "checkProcessCtrl";
             this.checkProcessCtrl.Size = new System.Drawing.Size(41, 17);
             this.checkProcessCtrl.TabIndex = 32;
@@ -399,7 +399,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 187);
+            this.label6.Location = new System.Drawing.Point(8, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 13);
             this.label6.TabIndex = 31;
@@ -407,7 +407,7 @@
             // 
             // textHotkeyProcess
             // 
-            this.textHotkeyProcess.Location = new System.Drawing.Point(113, 184);
+            this.textHotkeyProcess.Location = new System.Drawing.Point(114, 194);
             this.textHotkeyProcess.Name = "textHotkeyProcess";
             this.textHotkeyProcess.Size = new System.Drawing.Size(50, 20);
             this.textHotkeyProcess.TabIndex = 30;
