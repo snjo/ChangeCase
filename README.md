@@ -2,7 +2,7 @@ For more advanced features, and more reliable performance, use ClipBoardTool ins
 
 https://github.com/snjo/ClipboardTool
 
-# ChangeCase Case Converter
+# ChangeCase, a text case converter tool
 Automatically changes text in clipboard to upper/lower case
 
 ![This is an image](https://github.com/snjo/ChangeCase/raw/master/screenshot.png)
